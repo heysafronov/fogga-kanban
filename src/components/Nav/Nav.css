@@ -1,0 +1,126 @@
+.kanban__nav {
+  background-color: var(--colorNav);
+  grid-area: nav;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.kanban__nav-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 50px 0 50px;
+  background-color: var(--colorNav);
+}
+
+.kanban__nav-name {
+  display: flex;
+}
+
+.kanban__nav-avs {
+  display: flex;
+}
+
+.kanban__nav-avs-add {
+  border: 1.5px dashed var(--colorBar);
+  border-radius: 50px;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  cursor: pointer;
+  color: var(--colorBar);
+}
+
+.kanban__nav-avs-add i {
+  font-size: 28px;
+  position: absolute;
+  top: 6px;
+  left: 6px;
+}
+
+.kanban__nav-avs-invite {
+  position: absolute;
+  right: -1px;
+  top: -6px;
+  height: 60px;
+  width: 254px;
+  color: var(--colorName);
+  font-size: 12px;
+  padding: 10px 0 10px 10px;
+  background-color: var(--colorNav);
+  border-radius: 5px;
+  z-index: 1;
+  transition: 0.4s;
+  opacity: 0;
+}
+
+.kanban__nav-avs-add:hover .kanban__nav-avs-invite {
+  opacity: 1;
+}
+
+.invite-email {
+  border: none;
+  padding: 10px;
+  color: var(--colorName);
+  outline: none;
+  margin-right: 10px;
+  border-radius: 5px;
+  font-family: "Roboto", sans-serif;
+}
+
+.invite-email::placeholder {
+  color: var(--colorBarW);
+  font-style: italic;
+}
+
+.invite-btn {
+  border: none;
+  color: var(--colorWhite);
+  padding: 10px;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  background: linear-gradient(45deg, #9ea7fc 0%, #65b6f7 100%);
+  transition: 0.4s;
+}
+
+.invite-btn:hover {
+  box-shadow: 0px 0px 20px 0px #9ea7fc;
+}
+
+.kanban__nav-avs-img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.kanban__nav-avs-img img {
+  border-radius: 40px;
+}
+
+.kanban-name {
+  color: var(--colorName);
+  font-size: 28px;
+  font-weight: 400;
+}
+
+.kanban-arrow {
+  margin-left: 15px;
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0px 0px 10px 0px var(--colorBar);
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+  position: relative;
+  cursor: pointer;
+}
+
+.kanban-arrow i {
+  position: absolute;
+  color: #d8d8e4;
+  font-size: 32px;
+  left: -1.5px;
+  top: -1px;
+}

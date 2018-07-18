@@ -3,6 +3,7 @@ import "./index.css";
 import Logo from "./components/Logo/Logo.jsx";
 import Header from "./components/Header/Header.jsx";
 import Sidebar from "./components/Sidebar/Sidebar.jsx";
+import Nav from "./components/Nav/Nav.jsx";
 
 class App extends React.Component {
   render() {
@@ -12,6 +13,7 @@ class App extends React.Component {
           <Logo />
           <Header />
           <Sidebar />
+          <Nav />
         </div>
       </div>
     );
