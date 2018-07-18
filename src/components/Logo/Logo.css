@@ -1,0 +1,17 @@
+.kanban__logo {
+  background-color: var(--colorLogo);
+  grid-area: logo;
+  font-weight: 700;
+  text-align: center;
+  line-height: 60px;
+  font-size: 20px;
+}
+
+.kanban__logo a {
+  text-decoration: none;
+  color: var(--colorWhite);
+}
+
+.kanban__logo span {
+  margin: 0 5px;
+}

@@ -1,0 +1,56 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --logoHeader: 60px;
+  --sidebarNav: 120px;
+  --colorLogo: #888fdc;
+  --colorBar: #d2d7e0;
+  --colorBarW: #b7bec7;
+  --colorWhite: white;
+  --colorNav: #eef2f9;
+  --colorIcon: #a1ffff;
+  --colorName: #707090;
+}
+
+body {
+  background: linear-gradient(90deg, #bad6f9 0%, #bccdf2 100%);
+  font-family: "Roboto", sans-serif;
+  user-select: none;
+}
+
+@font-face {
+  font-family: "Material Icons";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/materialicons/v38/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2)
+    format("woff2");
+}
+
+.material-icons {
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased;
+}
+
+.kanban {
+  display: grid;
+  grid-template:
+    "logo header" var(--logoHeader) "sidebar nav" var(--sidebarNav) "sidebar main" auto
+    / minmax(auto, 120px) minmax(290px, 1320px);
+}
+
+.kanban-wrapper {
+  padding: 10px;
+}
