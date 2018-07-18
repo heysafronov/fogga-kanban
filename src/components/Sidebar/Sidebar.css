@@ -1,0 +1,132 @@
+.kanban__sidebar {
+  grid-area: sidebar;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: var(--colorWhite);
+  align-items: center;
+  box-shadow: 1px 1px 2px var(--colorBar);
+  z-index: 1;
+}
+
+.kanban__sidebar-menu {
+  max-width: 120px;
+  width: 100%;
+}
+
+.kanban__sidebar-settings {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  color: var(--colorBarW);
+}
+
+.kanban__sidebar-settings:hover {
+  color: var(--colorLogo);
+}
+
+.kanban__sidebar-settings i {
+  font-size: 28px;
+}
+
+.kanban__sidebar-settings span {
+  font-weight: 400;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.manage-area {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  color: var(--colorBarW);
+}
+
+.manage-area i {
+  font-size: 28px;
+}
+
+.manage-area:hover {
+  color: var(--colorLogo);
+}
+
+.manage-area span {
+  font-weight: 400;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.boards-area {
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--colorLogo);
+  border-left: 3px solid var(--colorLogo);
+  cursor: pointer;
+}
+
+.boards-area i {
+  font-size: 28px;
+}
+
+.boards-area span {
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 5px;
+}
+
+.schedule-area {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  color: var(--colorBarW);
+}
+
+.schedule-area:hover {
+  color: var(--colorLogo);
+}
+
+.schedule-area i {
+  font-size: 28px;
+}
+
+.schedule-area span {
+  font-weight: 400;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.reports-area {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  color: var(--colorBarW);
+}
+
+.reports-area:hover {
+  color: var(--colorLogo);
+}
+
+.reports-area i {
+  font-size: 28px;
+}
+
+.reports-area span {
+  font-weight: 400;
+  font-size: 14px;
+  margin-top: 5px;
+}

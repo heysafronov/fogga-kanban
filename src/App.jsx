@@ -2,6 +2,7 @@ import React from "react";
 import "./index.css";
 import Logo from "./components/Logo/Logo.jsx";
 import Header from "./components/Header/Header.jsx";
+import Sidebar from "./components/Sidebar/Sidebar.jsx";
 
 class App extends React.Component {
   render() {
@@ -10,6 +11,7 @@ class App extends React.Component {
         <div className="kanban">
           <Logo />
           <Header />
+          <Sidebar />
         </div>
       </div>
     );
