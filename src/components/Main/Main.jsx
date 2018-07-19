@@ -6,10 +6,10 @@ class Main extends React.Component {
     return (
       <section className="kanban__main">
         <div className="kanban__main-wrapper">
-          <Cards />
-          <Cards />
-          <Cards />
-          <Cards />
+          <Cards name="Backlog" type="backlog-color" />
+          <Cards name="In Progress" type="in-progress-color" />
+          <Cards name="Review" type="review-color" />
+          <Cards name="Complete" type="complete-color" />
         </div>
       </section>
     );
