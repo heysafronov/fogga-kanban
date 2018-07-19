@@ -1,0 +1,1 @@
+export const BOARD_OPEN = 'BOARD_OPEN';
