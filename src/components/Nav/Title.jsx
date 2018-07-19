@@ -9,7 +9,8 @@ class Title extends React.Component {
       <div className="kanban__nav-name">
         <div className="kanban-name">Studio Board</div>
         <div className="kanban-arrow" onClick={this.handleBoardOpen}><i
-          className="material-icons xyu">expand_more</i></div>
+          className="material-icons">{this.props.board ? "expand_more" : "chevron_right"}</i>
+        </div>
       </div>
     );
   }
@@ -20,4 +21,8 @@ class Title extends React.Component {
 
 }
 
-export default connect(null, { boardOpen })(Title);
+const mapStateToProps = (state) => ({
+  board: state.board
+});
+
+export default connect(mapStateToProps, { boardOpen })(Title);
