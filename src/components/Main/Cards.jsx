@@ -14,8 +14,9 @@ class Cards extends React.Component {
       <div className={classes}>
         <div className="card-wrapper__header">
           <div className="backlog-name">{name}</div>
-          <div className="backlog-dots"><i
-            className="material-icons">expand_more</i></div>
+          <div className="backlog-dots">
+            <i className="material-icons">expand_more</i>
+          </div>
         </div>
         <div className="cards">
           <Card />

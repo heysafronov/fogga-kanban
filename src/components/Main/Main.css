@@ -12,6 +12,10 @@
   margin: 0 50px 0 50px;
 }
 
+.kanban__main-wrapper-close {
+  display: none;
+}
+
 .backlog-color {
   background-image: linear-gradient(#f6f8fc, #f6f8fc), radial-gradient(circle at top left, #c781ff, #e57373);
 }
