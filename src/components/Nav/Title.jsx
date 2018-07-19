@@ -1,5 +1,5 @@
 import React from "react";
-import { boardOpen } from "../../acs/";
+import { boardOpen } from "../../actions/";
 import { connect } from "react-redux";
 
 class Title extends React.Component {

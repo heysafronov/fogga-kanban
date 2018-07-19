@@ -54,3 +54,48 @@ body {
 .kanban-wrapper {
   padding: 10px;
 }
+
+@media screen and (max-width: 540px) {
+  .kanban__nav-name {
+    margin: 0 auto;
+  }
+
+  .kanban__nav-wrapper {
+    margin: 0;
+  }
+
+  .avatar-user {
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 670px) {
+  .kanban__header-search {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .kanban__nav-avs {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 820px) {
+  .kanban__main-wrapper {
+    justify-content: space-around;
+    margin: 0px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .kanban-wrapper {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 1380px) {
+  .kanban__main-add-btn {
+    display: none;
+  }
+}
