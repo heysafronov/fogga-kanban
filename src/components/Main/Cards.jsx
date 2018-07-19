@@ -8,9 +8,8 @@ import { connect } from "react-redux";
 
 class Cards extends React.Component {
   render() {
-    const { name, type, data } = this.props;
+    const { name, type } = this.props;
     const classes = ClassNames("card-wrapper", type);
-console.log(data);
 
     return (
       <div className={classes}>
@@ -30,7 +29,8 @@ console.log(data);
   }
 
   get getData() {
-    return this.props.data.map(item =>
+    const { data } = this.props;
+    return data.map(item =>
       (<div key={item.id}>
         <Card data={item}/>
       </div>)
