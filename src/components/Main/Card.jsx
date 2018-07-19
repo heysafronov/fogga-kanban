@@ -32,7 +32,7 @@ class Card extends React.Component {
             <div className="add-peoples">
               <i className="material-icons">add</i>
             </div>
-            <div className="img-avatar"><img src="assets/img/av3.jpg"/></div>
+            <div className="img-avatar"><img src="/src/assets/img/thompson.jpg"/></div>
           </div>
         </div>
       </div>
