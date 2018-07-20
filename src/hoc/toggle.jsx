@@ -3,10 +3,12 @@ import React from "react";
 function toggleAdd(Component) {
   class Toggle extends React.Component {
     state = {
-      openItemId: null
+      openItemType: null
     };
 
-    toggleOpenItem = (openItemId) => this.setState({openItemId: this.state.openItemId ? null : openItemId});
+    toggleOpenItem = (openItemType) => {
+      this.setState({openItemType: this.state.openItemType ? null : openItemType});
+    };
 
     render() {
       return (
