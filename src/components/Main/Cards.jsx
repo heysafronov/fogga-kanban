@@ -5,16 +5,17 @@ import Add from "./Add.jsx";
 import ClassNames from "classnames";
 import { connect } from "react-redux";
 // import toggleAdd from "../../hoc/toggle.jsx";
+// import {isOpen} from "../../actions";
 
 
 class Cards extends React.PureComponent {
   state = {
-    openItemId: null
+    openItemType: null
   };
 
 
-  toggleOpenItem = (openItemId) => {
-    this.setState({openItemId: this.state.openItemId ? null : openItemId})
+  toggleOpenItem = (openItemType) => {
+    this.setState({openItemType: this.state.openItemType ? null : openItemType});
   };
 
   render() {
@@ -42,16 +43,16 @@ class Cards extends React.PureComponent {
     return data.map(item =>
       (<div key={item.id}>
         <Card data={item}/>
-        <Add item={item} toggleOpenItem={this.toggleOpenItem} isOpen={this.state.openItemId === item.type}/>
+        <Add item={item} toggleOpenItem={this.toggleOpenItem} isOpen={this.state.openItemType === item.type}/>
 
       </div>)
     )
   }
 }
 
-const mapStateToProps = (state) => ({
-  tasks: state.tasks
-});
+// const mapStateToProps = (state) => ({
+//   isOpenA: state.isOpen
+// });
 
-export default connect(mapStateToProps)(Cards);
+export default Cards;
 

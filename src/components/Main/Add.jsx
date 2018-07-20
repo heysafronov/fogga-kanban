@@ -2,6 +2,7 @@ import React from "react";
 // import { connect } from "react-redux";
 // import {isOpen} from "../../actions";
 import Form from "./Form.jsx";
+// import { connect } from "react-redux";
 
 class Add extends React.Component {
   render() {
@@ -33,7 +34,7 @@ class Add extends React.Component {
 }
 
 // const mapStateToProps = (state) => ({
-//   isOpen: state.isOpen
+//   isOpenA: state.isOpen
 // });
 
 export default Add;

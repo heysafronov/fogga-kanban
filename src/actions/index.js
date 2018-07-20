@@ -13,9 +13,8 @@ export function addTask(task) {
   };
 }
 
-export function isOpen(type) {
+export function isOpen() {
   return {
-    type: "IS_OPEN",
-    payload: type
+    type: "IS_OPEN"
   };
 }
