@@ -26,7 +26,7 @@ class Add extends React.Component {
       return null;
     }
     return (
-      <Form />
+      <Form type={this.props.item.type}/>
     )
 }
 

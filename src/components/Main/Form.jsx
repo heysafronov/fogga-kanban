@@ -5,7 +5,7 @@ import {addTask} from "../../actions/"
 class Form extends React.Component {
   state = {
     id: "8tlgjfek",
-    type: "backlog",
+    type: "",
     priority: "low",
     user: "C. Guvert",
     text: "",
@@ -40,19 +40,18 @@ class Form extends React.Component {
   }
 
   handleSubmit = (ev) => {
+
     ev.preventDefault();
     this.props.addTask(this.state);
   };
 
   handleChange = (ev) => {
-    this.setState({text: ev.target.value});
+    const {type} = this.props;
+    this.setState({
+      text: ev.target.value,
+      type: type
+    });
   }
 }
 
-
-const mapStateToProps = (state) => ({
-  tasks: state.tasks
-});
-
-
-export default connect(mapStateToProps, {addTask})(Form);
+export default connect(null, {addTask})(Form);
