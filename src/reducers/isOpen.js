@@ -1,5 +1,5 @@
-export default (isOpen = null, action) => {
+export default (isOpen = false, action) => {
   return (action.type === "IS_OPEN"
-    ? isOpen = true
-    : isOpen = false);
+    ? !isOpen
+    : isOpen);
 }

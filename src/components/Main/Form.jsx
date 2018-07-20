@@ -40,9 +40,11 @@ class Form extends React.Component {
   }
 
   handleSubmit = (ev) => {
-
     ev.preventDefault();
     this.props.addTask(this.state);
+    this.setState({
+      text: ""
+    })
   };
 
   handleChange = (ev) => {
