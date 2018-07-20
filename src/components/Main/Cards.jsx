@@ -4,9 +4,20 @@ import Add from "./Add.jsx";
 // import Form from "./Form.jsx";
 import ClassNames from "classnames";
 import { connect } from "react-redux";
+// import toggleAdd from "../../hoc/toggle.jsx";
 
 
 class Cards extends React.Component {
+  state = {
+    openItemId: null
+  };
+
+
+  toggleOpenItem = (openItemId) => {
+    console.log('openItemId', openItemId);
+    this.setState({openItemId: this.state.openItemId ? null : openItemId})
+  };
+
   render() {
     const { name, style } = this.props;
     const classes = ClassNames("card-wrapper", style);
@@ -32,7 +43,7 @@ class Cards extends React.Component {
     return data.map(item =>
       (<div key={item.id}>
         <Card data={item}/>
-        <Add type={item.type} isOpen={this.props.type === item.type}/>
+        <Add item={item} toggleOpenItem={this.toggleOpenItem} isOpen={this.state.openItemId === item.type}/>
 
       </div>)
     )
@@ -44,3 +55,4 @@ const mapStateToProps = (state) => ({
 });
 
 export default connect(mapStateToProps)(Cards);
+
