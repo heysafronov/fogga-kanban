@@ -1,16 +1,27 @@
 import React from "react";
 
 class Form extends React.Component {
+  state = {
+    id: "8tlgjfek",
+    type: "backlog",
+    priority: "low",
+    user: "C. Guvert",
+    text: "",
+    avatar: "/src/assets/img/guvert.jpg",
+    attach: "2",
+    comments: "1"
+  };
+
   render() {
     return (
-      <form className="add-card-form add-card-form-true">
+      <form onSubmit={this.handleSubmit} className="add-card-form add-card-form-true">
         <div className="add-card-form__header">
           <div className="from__low-pr">Low Priority</div>
           <div className="from__med-pr">Med Priority</div>
           <div className="from__high-pr">High Priority</div>
         </div>
         <textarea className="add-card-form__main" type="text"
-                  placeholder="Write your task"/>
+                  placeholder="Write your task" value={this.state.text} onChange={this.handleChange }/>
         <div className="add-card-form__footer">
           <div className="form__footer">
             <div className="form__footer-av"><img src={require("../../assets/img/thompson.jpg")}/>
@@ -20,10 +31,19 @@ class Form extends React.Component {
           </div>
           <div className="form__del"><i className="material-icons">clear</i>
           </div>
-          <button className="form-add-btn">Add</button>
+          <input className="form-add-btn" type="submit" value="Add" />
         </div>
       </form>
     );
+  }
+
+  handleSubmit = (ev) => {
+    ev.preventDefault();
+    alert(this.state.text);
+  };
+
+  handleChange = (ev) => {
+    this.setState({text: ev.target.value});
   }
 }
 
