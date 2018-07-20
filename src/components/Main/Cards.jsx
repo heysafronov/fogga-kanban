@@ -7,18 +7,18 @@ import { connect } from "react-redux";
 // import toggleAdd from "../../hoc/toggle.jsx";
 
 
-class Cards extends React.Component {
+class Cards extends React.PureComponent {
   state = {
     openItemId: null
   };
 
 
   toggleOpenItem = (openItemId) => {
-    console.log('openItemId', openItemId);
     this.setState({openItemId: this.state.openItemId ? null : openItemId})
   };
 
   render() {
+    console.log('render');
     const { name, style } = this.props;
     const classes = ClassNames("card-wrapper", style);
 
