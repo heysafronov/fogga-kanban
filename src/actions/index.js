@@ -6,10 +6,10 @@ export function boardOpen() {
   };
 }
 
-export function addTask(type) {
+export function addTask(task) {
   return {
     type: ADD_TASK,
-    payload: type
+    payload: task
   };
 }
 

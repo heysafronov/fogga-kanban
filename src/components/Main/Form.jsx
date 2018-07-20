@@ -1,4 +1,6 @@
 import React from "react";
+import {connect } from "react-redux";
+import {addTask} from "../../actions/"
 
 class Form extends React.Component {
   state = {
@@ -39,7 +41,7 @@ class Form extends React.Component {
 
   handleSubmit = (ev) => {
     ev.preventDefault();
-    alert(this.state.text);
+    this.props.addTask(this.state);
   };
 
   handleChange = (ev) => {
@@ -47,4 +49,10 @@ class Form extends React.Component {
   }
 }
 
-export default Form;
+
+const mapStateToProps = (state) => ({
+  tasks: state.tasks
+});
+
+
+export default connect(mapStateToProps, {addTask})(Form);

@@ -1,4 +1,5 @@
 import { normalizedTasks } from "../api/data";
+import { ADD_TASK } from "../constants";
 
 export default (tasks = normalizedTasks, action) => {
   const { type, payload } = action;
@@ -9,7 +10,10 @@ export default (tasks = normalizedTasks, action) => {
     // пройдемся по статьям и вернем те статьи у которых айдишник не
     // совпадает с тем который мы хотим удалить, который пришел к нам в payload
 
+        case ADD_TASK:
+          return tasks.concat(payload);
+
     default:
       return tasks;
-  }
-}
+
+}}

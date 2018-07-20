@@ -18,6 +18,7 @@ class Cards extends React.PureComponent {
   };
 
   render() {
+    console.log('render');
     const { name, style } = this.props;
     const classes = ClassNames("card-wrapper", style);
 
