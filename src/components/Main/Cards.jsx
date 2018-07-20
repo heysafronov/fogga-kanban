@@ -1,15 +1,15 @@
 import React from "react";
 import Card from "./Card.jsx";
 import Add from "./Add.jsx";
-import Form from "./Form.jsx";
+// import Form from "./Form.jsx";
 import ClassNames from "classnames";
 import { connect } from "react-redux";
 
 
 class Cards extends React.Component {
   render() {
-    const { name, type } = this.props;
-    const classes = ClassNames("card-wrapper", type);
+    const { name, style } = this.props;
+    const classes = ClassNames("card-wrapper", style);
 
     return (
       <div className={classes}>
@@ -32,8 +32,8 @@ class Cards extends React.Component {
     return data.map(item =>
       (<div key={item.id}>
         <Card data={item}/>
-        <Add />
-        <Form />
+        <Add type={item.type} isOpen={this.props.type === item.type}/>
+
       </div>)
     )
   }

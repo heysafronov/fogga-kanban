@@ -17,10 +17,10 @@ class Main extends React.Component {
     return (
       <section className="kanban__main">
         <div className={board ? "kanban__main-wrapper" : close}>
-          <Cards name="Backlog" type="backlog-color" data={backlog}/>
-          <Cards name="In Progress" type="in-progress-color" data={progress}/>
-          <Cards name="Review" type="review-color" data={review}/>
-          <Cards name="Complete" type="complete-color" data={complete}/>
+          <Cards name="Backlog" style="backlog-color" type="backlog" data={backlog}/>
+          <Cards name="In Progress" style="in-progress-color" type="progress" data={progress}/>
+          <Cards name="Review" style="review-color" type="review" data={review}/>
+          <Cards name="Complete" style="complete-color" type="complete" data={complete}/>
         </div>
       </section>
     );

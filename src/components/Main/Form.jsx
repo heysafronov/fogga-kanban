@@ -1,9 +1,13 @@
 import React from "react";
+import { connect } from "react-redux";
+import ClassNames from "classnames";
 
 class Form extends React.Component {
   render() {
+
+    const on = ClassNames("add-card-form", "add-card-form-true");
     return (
-      <form className="add-card-form">
+      <form className={this.props.isOpen ? on : "add-card-form"}>
         <div className="add-card-form__header">
           <div className="from__low-pr">Low Priority</div>
           <div className="from__med-pr">Med Priority</div>
@@ -27,4 +31,8 @@ class Form extends React.Component {
   }
 }
 
-export default Form;
+const mapStateToProps = (state) => ({
+  addTask: state.addTask
+});
+
+export default connect(mapStateToProps)(Form);
