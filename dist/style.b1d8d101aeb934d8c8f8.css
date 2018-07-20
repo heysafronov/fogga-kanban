@@ -604,6 +604,10 @@ body {
   margin: 0 50px 0 50px;
 }
 
+.kanban__main-wrapper-close {
+  display: none;
+}
+
 .backlog-color {
   background-image: linear-gradient(#f6f8fc, #f6f8fc), radial-gradient(circle at top left, #c781ff, #e57373);
 }
@@ -750,6 +754,16 @@ body {
 
 .from__high-pr:hover {
   background: linear-gradient(138.6789deg, #c781ff 17%, #e57373 83%);
+}
+
+.add-card-form {
+  display: none;
+  flex-direction: column;
+  padding: 30px 10px 10px 10px;
+}
+
+.add-card-form-true {
+  display: flex;
 }
 
 .add-card-form__main {
@@ -1011,4 +1025,4 @@ body {
 
 
 
-/*# sourceMappingURL=style.ebce96466a931d55d040.css.map*/
+/*# sourceMappingURL=style.b1d8d101aeb934d8c8f8.css.map*/
