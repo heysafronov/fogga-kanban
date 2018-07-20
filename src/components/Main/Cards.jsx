@@ -21,8 +21,7 @@ class Cards extends React.Component {
         </div>
         <div className="cards">
           {this.getData}
-          <Add />
-          <Form />
+
         </div>
       </div>
     );
@@ -33,6 +32,8 @@ class Cards extends React.Component {
     return data.map(item =>
       (<div key={item.id}>
         <Card data={item}/>
+        <Add />
+        <Form />
       </div>)
     )
   }

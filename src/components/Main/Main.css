@@ -164,6 +164,16 @@
   background: linear-gradient(138.6789deg, #c781ff 17%, #e57373 83%);
 }
 
+.add-card-form {
+  display: none;
+  flex-direction: column;
+  padding: 30px 10px 10px 10px;
+}
+
+.add-card-form-true {
+  display: flex;
+}
+
 .add-card-form__main {
   resize: none;
   border: none;
