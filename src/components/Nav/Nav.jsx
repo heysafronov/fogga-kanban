@@ -1,6 +1,6 @@
 import React from "react";
-import Title from "./Title.jsx";
 import Team from "./Team.jsx";
+import Title from "./Title.jsx";
 
 class Nav extends React.Component {
   render() {
@@ -11,7 +11,7 @@ class Nav extends React.Component {
           <Team />
         </div>
       </section>
-  );
+    );
   }
 }
 

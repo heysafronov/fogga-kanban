@@ -33,7 +33,9 @@ class Card extends React.Component {
             <div className="add-peoples">
               <i className="material-icons">add</i>
             </div>
-            <div className="img-avatar"><img src={require("../../assets/img/thompson.jpg")}/></div>
+            <div className="img-avatar">
+              <img src={require("../../assets/img/thompson.jpg")} />
+            </div>
           </div>
         </div>
       </div>

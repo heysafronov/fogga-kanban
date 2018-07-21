@@ -6,7 +6,7 @@ class Info extends React.Component {
       <React.Fragment>
         <div className="name-user">M. Thompson</div>
         <div className="avatar-user">
-          <img src={require('../../assets/img/thompson.jpg')} />
+          <img src={require("../../assets/img/thompson.jpg")} />
         </div>
       </React.Fragment>
     );

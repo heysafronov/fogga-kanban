@@ -1,4 +1,4 @@
-import {WHO_OPEN} from "../constants"
+import { WHO_OPEN } from "../constants";
 
 export default (whoOpen = true, action) => {
   const { type, payload } = action;
@@ -9,6 +9,5 @@ export default (whoOpen = true, action) => {
 
     default:
       return !whoOpen;
-
   }
-}
+};

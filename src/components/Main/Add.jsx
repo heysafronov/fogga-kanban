@@ -1,6 +1,6 @@
 import React from "react";
-import { whoOpen } from "../../actions";
 import Form from "./Form.jsx";
+import { whoOpen } from "../../actions";
 import { connect } from "react-redux";
 
 class Add extends React.Component {
@@ -28,15 +28,15 @@ class Add extends React.Component {
     if (typeCards !== this.props.whoOpen) {
       return null;
     }
-    return (
-      <Form type={typeCards}/>
-    );
+    return <Form type={typeCards} />;
   }
-
 }
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = state => ({
   whoOpen: state.whoOpen
 });
 
-export default connect(mapStateToProps, { whoOpenAction: whoOpen })(Add);
+export default connect(
+  mapStateToProps,
+  { whoOpenAction: whoOpen }
+)(Add);

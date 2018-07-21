@@ -1,23 +1,23 @@
-export const filtratedTasksBacklog = (state) => {
+export const filtratedTasksBacklog = state => {
   return state.tasks.filter(task => {
-    return (task.type === "backlog");
-  })
+    return task.type === "backlog";
+  });
 };
 
-export const filtratedTasksProgress = (state) => {
+export const filtratedTasksProgress = state => {
   return state.tasks.filter(task => {
-    return (task.type === "progress");
-  })
+    return task.type === "progress";
+  });
 };
 
-export const filtratedTasksReview = (state) => {
+export const filtratedTasksReview = state => {
   return state.tasks.filter(task => {
-    return (task.type === "review");
-  })
+    return task.type === "review";
+  });
 };
 
-export const filtratedTasksComplete = (state) => {
+export const filtratedTasksComplete = state => {
   return state.tasks.filter(task => {
-    return (task.type === "complete");
-  })
+    return task.type === "complete";
+  });
 };

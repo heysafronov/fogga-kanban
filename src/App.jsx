@@ -1,10 +1,10 @@
-import React from "react";
 import "./index.css";
+import React from "react";
+import Nav from "./components/Nav/Nav.jsx";
 import Logo from "./components/Logo/Logo.jsx";
+import Main from "./components/Main/Main.jsx";
 import Header from "./components/Header/Header.jsx";
 import Sidebar from "./components/Sidebar/Sidebar.jsx";
-import Nav from "./components/Nav/Nav.jsx";
-import Main from "./components/Main/Main.jsx";
 
 class App extends React.Component {
   render() {

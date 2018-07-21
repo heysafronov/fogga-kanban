@@ -1,8 +1,8 @@
 import React from "react";
 import Manage from "./Manage.jsx";
 import Boards from "./Boards.jsx";
-import Schedule from "./Schedule.jsx";
 import Reports from "./Reports.jsx";
+import Schedule from "./Schedule.jsx";
 import Settings from "./Settings.jsx";
 
 class Sidebar extends React.Component {
