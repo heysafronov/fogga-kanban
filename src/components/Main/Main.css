@@ -103,17 +103,9 @@
   color: var(--colorLogo);
 }
 
-.add-card-form {
-  display: none;
-  flex-direction: column;
-  padding: 30px 10px 10px 10px;
-}
-
 .add-card-form__header {
   display: flex;
   justify-content: space-between;
-  border-top: 1px dashed var(--colorBarW);
-  height: 50px;
   align-items: flex-end;
 }
 
@@ -171,7 +163,8 @@
 .add-card-form {
   display: none;
   flex-direction: column;
-  padding: 30px 10px 10px 10px;
+  padding: 0 0 10px 0;
+  width: 260px;
 }
 
 .add-card-form-true {
@@ -187,7 +180,7 @@
   border-radius: 5px;
   height: 40px;
   margin: 10px 0 10px 0;
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
 }
 
 .add-card-form__footer {
@@ -213,19 +206,8 @@
   border-radius: 20px;
 }
 
-.form__del {
-  color: var(--colorBarW);
-  cursor: pointer;
-  font-size: 18px;
-  display: none;
-}
-
 .add-card-form:hover .form__del {
   display: flex;
-}
-
-.form__del:hover {
-  color: var(--colorLogo);
 }
 
 .form-add-btn {

@@ -5,7 +5,7 @@ export const normalizedTasks = [
     priority: "Low Priority",
     user: "C. Guvert",
     text: "Company website redesign",
-    avatar: "/0cafaf103d2eef926eebb15b20651c88.jpg",
+    avatar: "./3bc84a401a51991f895ac6f6f40b7010.jpg",
     comments: "1",
     attach: "2",
     style: "card-color-low"
@@ -16,7 +16,7 @@ export const normalizedTasks = [
     priority: "Med Priority",
     user: "A. Nilson",
     text: "Mobile app login process prototype",
-    avatar: "/0cafaf103d2eef926eebb15b20651c88.jpg",
+    avatar: "./615f6d8539dbe37bc2c8f3d7d749182c.jpg",
     comments: "2",
     attach: "3",
     style: "card-color-med"
@@ -27,7 +27,7 @@ export const normalizedTasks = [
     priority: "High Priority",
     user: "M. Thompson",
     text: "Onboarding designs",
-    avatar: "/0cafaf103d2eef926eebb15b20651c88.jpg",
+    avatar: "./41aad055f35eb28f42b84ca1b4cf5d53.jpg",
     comments: "1",
     attach: "2",
     style: "card-color-high"
@@ -38,7 +38,7 @@ export const normalizedTasks = [
     priority: "High Priority",
     user: "V. Cobain",
     text: "Research and strategy for upcoming projects",
-    avatar: "/0cafaf103d2eef926eebb15b20651c88.jpg",
+    avatar: "./0cafaf103d2eef926eebb15b20651c88.jpg",
     comments: "1",
     attach: "3",
     style: "card-color-high"
@@ -49,7 +49,7 @@ export const normalizedTasks = [
     priority: "Low Priority",
     user: "M. Thompson",
     text: "Dashboard layout design",
-    avatar: "/0cafaf103d2eef926eebb15b20651c88.jpg",
+    avatar: "./41aad055f35eb28f42b84ca1b4cf5d53.jpg",
     comments: "1",
     attach: "2",
     style: "card-color-low"
@@ -60,7 +60,7 @@ export const normalizedTasks = [
     priority: "Low Priority",
     user: "A. Nilson",
     text: "Rewiew client spec document and give feedback",
-    avatar: "/0cafaf103d2eef926eebb15b20651c88.jpg",
+    avatar: "./615f6d8539dbe37bc2c8f3d7d749182c.jpg",
     comments: "1",
     attach: "3",
     style: "card-color-low"

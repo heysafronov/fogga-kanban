@@ -41,9 +41,6 @@ class Form extends React.Component {
               <i className="material-icons">attach_file</i>
             </div>
           </div>
-          <div className="form__del">
-            <i className="material-icons">clear</i>
-          </div>
           <input className="form-add-btn" type="submit" value="Add" />
         </div>
       </form>
