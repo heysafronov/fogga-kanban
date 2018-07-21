@@ -1,13 +1,13 @@
 import { WHO_OPEN } from "../constants";
 
-export default (whoOpen = true, action) => {
+export default (whoIsOpen = true, action) => {
   const { type, payload } = action;
 
   switch (type) {
     case WHO_OPEN:
-      return whoOpen ? null : payload;
+      return whoIsOpen ? null : payload;
 
     default:
-      return !whoOpen;
+      return !whoIsOpen;
   }
 };

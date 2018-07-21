@@ -1,10 +1,10 @@
 import { combineReducers } from "redux";
 import board from "./board";
 import tasks from "./tasks";
-import whoOpen from "./whoOpen";
+import whoIsOpen from "./whoIsOpen";
 
 export default combineReducers({
   board,
   tasks,
-  whoOpen
+  whoIsOpen
 });

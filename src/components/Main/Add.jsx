@@ -1,6 +1,6 @@
 import React from "react";
 import Form from "./Form.jsx";
-import { whoOpen } from "../../actions";
+import { whoIsOpen } from "../../actions";
 import { connect } from "react-redux";
 
 class Add extends React.Component {
@@ -13,19 +13,19 @@ class Add extends React.Component {
             <i className="material-icons">add_circle_outline</i>
           </div>
         </div>
-        {this.isOpenForm}
+        {this.formIsOpen}
       </React.Fragment>
     );
   }
 
   handleToggle = () => {
-    const { whoOpenAction, typeCards } = this.props;
-    whoOpenAction(typeCards);
+    const { whoIsOpenAction, typeCards } = this.props;
+    whoIsOpenAction(typeCards);
   };
 
-  get isOpenForm() {
+  get formIsOpen() {
     const { typeCards } = this.props;
-    if (typeCards !== this.props.whoOpen) {
+    if (typeCards !== this.props.whoIsOpen) {
       return null;
     }
     return <Form type={typeCards} />;
@@ -33,10 +33,10 @@ class Add extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  whoOpen: state.whoOpen
+  whoIsOpen: state.whoIsOpen
 });
 
 export default connect(
   mapStateToProps,
-  { whoOpenAction: whoOpen }
+  { whoIsOpenAction: whoIsOpen }
 )(Add);

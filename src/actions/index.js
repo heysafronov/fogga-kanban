@@ -13,7 +13,7 @@ export function addTask(task) {
   };
 }
 
-export function whoOpen(type) {
+export function whoIsOpen(type) {
   return {
     type: WHO_OPEN,
     payload: type
