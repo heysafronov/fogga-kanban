@@ -1,7 +1,7 @@
 import React from "react";
 import Form from "./Form.jsx";
-import { whoIsOpen } from "../../actions";
 import { connect } from "react-redux";
+import { whoIsOpen } from "../../actions";
 
 class Add extends React.Component {
   render() {

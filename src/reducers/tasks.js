@@ -7,8 +7,6 @@ export default (tasks = normalizedTasks, action) => {
   switch (type) {
     case DELETE_TASK:
       return tasks.filter(task => task.id !== payload.id);
-    // пройдемся по статьям и вернем те статьи у которых айдишник не
-    // совпадает с тем который мы хотим удалить, который пришел к нам в payload
 
     case ADD_TASK:
       return tasks.concat(payload);

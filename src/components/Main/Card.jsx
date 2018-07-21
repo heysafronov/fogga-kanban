@@ -1,4 +1,6 @@
 import React from "react";
+import { connect } from "react-redux";
+import { deleteTask } from "../../actions/";
 
 class Card extends React.Component {
   render() {
@@ -9,7 +11,7 @@ class Card extends React.Component {
           <div className="card-container-color card-color-low">
             <div className="card__header-priority">{data.priority}</div>
           </div>
-          <div className="card__header-clear">
+          <div onClick={this.handleDelete} className="card__header-clear">
             <i className="material-icons">clear</i>
           </div>
         </div>
@@ -41,6 +43,14 @@ class Card extends React.Component {
       </div>
     );
   }
+
+  handleDelete = () => {
+    const { data, deleteTask } = this.props;
+    deleteTask(data.id);
+  };
 }
 
-export default Card;
+export default connect(
+  null,
+  { deleteTask }
+)(Card);
