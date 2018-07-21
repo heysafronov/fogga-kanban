@@ -1,14 +1,16 @@
 import React from "react";
+import ClassNames from "classnames";
 import { connect } from "react-redux";
 import { deleteTask } from "../../actions/";
 
 class Card extends React.Component {
   render() {
     const { data } = this.props;
+    const style = ClassNames("card-container-color", data.style);
     return (
       <div className="card">
         <div className="card__header">
-          <div className="card-container-color card-color-low">
+          <div className={style}>
             <div className="card__header-priority">{data.priority}</div>
           </div>
           <div onClick={this.handleDelete} className="card__header-clear">
