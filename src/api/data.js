@@ -38,5 +38,15 @@ export const normalizedTasks = [
     avatar: "/src/assets/img/thompson.jpg",
     attach: "2",
     comments: "1"
+  },
+  {
+    id: "a57gjfek",
+    type: "backlog",
+    priority: "low",
+    user: "C. Guvert",
+    text: "Company website redesign",
+    avatar: "/src/assets/img/guvert.jpg",
+    attach: "2",
+    comments: "1"
   }
 ];

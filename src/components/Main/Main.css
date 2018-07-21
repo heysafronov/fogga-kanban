@@ -83,6 +83,10 @@
   color: var(--colorBarW);
 }
 
+.card-wrapper__footer-false {
+  display: none;
+}
+
 .add-task {
   font-size: 16px;
   font-weight: 400;

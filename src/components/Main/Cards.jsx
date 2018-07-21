@@ -7,6 +7,7 @@ import toggleAdd from "../../hoc/toggle.jsx";
 
 class Cards extends React.PureComponent {
   render() {
+    console.log('render');
     const { name, style } = this.props;
     const classes = ClassNames("card-wrapper", style);
     return (
@@ -19,6 +20,7 @@ class Cards extends React.PureComponent {
         </div>
         <div className="cards">
           {this.getData}
+          <Add typez={this.props.type} />
         </div>
       </div>
     );
@@ -26,15 +28,20 @@ class Cards extends React.PureComponent {
 
   get getData() {
     const { data } = this.props;
-    return data.map(item =>
+    let allCards = data.map(item =>
       (<div key={item.id}>
         <Card data={item}/>
-        <Add item={item} toggleOpenItem={this.props.toggleOpenItem} isOpen={this.props.openItemType === item.type}/>
+
       </div>)
+    );
+    return (
+      allCards
     )
+
   }
 }
 
+{/*<Add item={item} toggleOpenItem={this.props.toggleOpenItem} isOpen={this.props.openItemType === item.type} typez={this.props.type}/>*/}
 
 export default toggleAdd(Cards);
 

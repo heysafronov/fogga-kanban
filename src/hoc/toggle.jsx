@@ -7,7 +7,8 @@ function toggleAdd(Component) {
     };
 
     toggleOpenItem = (openItemType) => {
-      this.setState({openItemType: this.state.openItemType ? null : openItemType});
+      this.setState({
+        openItemType: this.state.openItemType ? null : openItemType});
     };
 
     render() {
