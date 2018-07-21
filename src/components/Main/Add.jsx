@@ -1,61 +1,42 @@
 import React from "react";
-import ReactDOM from "react-dom";
-// import { connect } from "react-redux";
-import {isOpen} from "../../actions";
+import { whoOpen } from "../../actions";
 import Form from "./Form.jsx";
-// import { connect } from "react-redux";
-import {connect } from "react-redux";
-
+import { connect } from "react-redux";
 
 class Add extends React.Component {
-  state = {
-    add: true
-  };
-
   render() {
     return (
-<React.Fragment>
-  <div ref="wassup" onClick={this.handleAddTask} className="card-wrapper__footer">
-    <div className="add-task">Add task</div>
-    <div className="add-task-ico"><i
-      className="material-icons">add_circle_outline</i></div>
-  </div>
-  {this.isOpenAdd}
-</React.Fragment>
+      <React.Fragment>
+        <div ref="wassup" onClick={this.handleToggle}
+             className="card-wrapper__footer">
+          <div className="add-task">Add task</div>
+          <div className="add-task-ico"><i
+            className="material-icons">add_circle_outline</i></div>
+        </div>
+        {this.isOpenForm}
+      </React.Fragment>
     );
   }
 
-  handleAddTask = () => {
-
-    // this.props.toggleOpenItem(this.props.item.type);
-
-
-    // this.setState({
-    //   item: this.state.item ? null : this.props.item.type
-    // })
-
-    // this.setState({
-    //   add: !this.state.add
-    // });
-    this.props.isOpenFunc(this.props.typez);
-    // let mountNode = ReactDOM.findDOMNode(this.refs.wassup);
-    // console.log(mountNode);
-    // ReactDOM.unmountComponentAtNode(mountNode);
+  handleToggle = () => {
+    const { whoOpenAction, typeCards } = this.props;
+    whoOpenAction(typeCards);
   };
 
-  get isOpenAdd() {
-    if (this.props.typez !== this.props.isOpenA) {
+  get isOpenForm() {
+    const { typeCards } = this.props;
+    if (typeCards !== this.props.whoOpen) {
       return null;
     }
     return (
-      <Form type={this.props.typez}/>
-    )
-}
+      <Form type={typeCards}/>
+    );
+  }
 
 }
 
 const mapStateToProps = (state) => ({
-  isOpenA: state.isOpen
+  whoOpen: state.whoOpen
 });
 
-export default connect(mapStateToProps, {isOpenFunc: isOpen})(Add);
+export default connect(mapStateToProps, { whoOpenAction: whoOpen })(Add);

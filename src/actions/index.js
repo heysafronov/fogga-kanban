@@ -1,4 +1,4 @@
-import { ADD_TASK, BOARD_OPEN } from "../constants";
+import { ADD_TASK, BOARD_OPEN, WHO_OPEN } from "../constants";
 
 export function boardOpen() {
   return {
@@ -13,9 +13,9 @@ export function addTask(task) {
   };
 }
 
-export function isOpen(type) {
+export function whoOpen(type) {
   return {
-    type: "IS_OPEN",
+    type: WHO_OPEN,
     payload: type
   };
 }
