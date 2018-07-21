@@ -7,11 +7,11 @@ class Add extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <div ref="wassup" onClick={this.handleToggle}
-             className="card-wrapper__footer">
+        <div onClick={this.handleToggle} className="card-wrapper__footer">
           <div className="add-task">Add task</div>
-          <div className="add-task-ico"><i
-            className="material-icons">add_circle_outline</i></div>
+          <div className="add-task-ico">
+            <i className="material-icons">add_circle_outline</i>
+          </div>
         </div>
         {this.isOpenForm}
       </React.Fragment>

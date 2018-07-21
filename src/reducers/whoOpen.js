@@ -5,7 +5,7 @@ export default (whoOpen = null, action) => {
 
   switch (type) {
     case WHO_OPEN:
-      return payload;
+      return whoOpen ? null : payload;
 
     default:
       return !whoOpen;
