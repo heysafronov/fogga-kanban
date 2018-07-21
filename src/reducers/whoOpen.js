@@ -1,6 +1,6 @@
 import {WHO_OPEN} from "../constants"
 
-export default (whoOpen = null, action) => {
+export default (whoOpen = true, action) => {
   const { type, payload } = action;
 
   switch (type) {
