@@ -156,7 +156,7 @@
 }
 
 .input-text:focus {
-  border-bottom: 1px dashed var(--colorIcon);
+  border-bottom: 1px dashed var(--colorWhite);
 }
 
 .input-text::-webkit-input-placeholder {
