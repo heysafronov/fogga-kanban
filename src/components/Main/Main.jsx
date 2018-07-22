@@ -12,13 +12,13 @@ import {
 class Main extends React.Component {
   render() {
     const { board, backlog, progress, review, complete } = this.props;
-    const close = ClassNames(
-      "kanban__main-wrapper",
-      "kanban__main-wrapper-close"
-    );
+    const style = ClassNames({
+      "kanban__main-wrapper": true,
+      "kanban__main-wrapper-close": !board
+    });
     return (
       <section className="kanban__main">
-        <div className={board ? "kanban__main-wrapper" : close}>
+        <div className={style}>
           <Cards
             name="Backlog"
             style="backlog-color"
