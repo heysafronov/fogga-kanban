@@ -1,4 +1,10 @@
-import { ADD_TASK, BOARD_OPEN, DELETE_TASK, WHO_OPEN } from "../constants";
+import {
+  ADD_TASK,
+  BOARD_OPEN,
+  DELETE_TASK,
+  WHO_OPEN,
+  TOGGLE_CARDS
+} from "../constants";
 
 export function boardOpen() {
   return {
@@ -24,5 +30,12 @@ export function deleteTask(id) {
   return {
     type: DELETE_TASK,
     payload: { id }
+  };
+}
+
+export function toggleCards(type) {
+  return {
+    type: TOGGLE_CARDS,
+    payload: type
   };
 }

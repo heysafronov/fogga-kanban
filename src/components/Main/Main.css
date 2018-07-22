@@ -251,6 +251,10 @@
   align-items: center;
 }
 
+.cards-false {
+  display: none;
+}
+
 .card {
   border-radius: 5px;
   background-color: var(--colorWhite);
