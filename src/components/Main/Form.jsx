@@ -1,6 +1,11 @@
 import React from "react";
 import { connect } from "react-redux";
 import { addTask } from "../../actions/";
+import {
+  filtratedTasksBacklog,
+  filtratedTasksComplete, filtratedTasksProgress,
+  filtratedTasksReview
+} from "../../selectors";
 
 class Form extends React.Component {
   state = {
@@ -15,6 +20,7 @@ class Form extends React.Component {
   };
 
   render() {
+    const { text } = this.state;
     return (
       <form
         onSubmit={this.handleSubmit}
@@ -29,7 +35,7 @@ class Form extends React.Component {
           className="add-card-form__main"
           type="text"
           placeholder="Write your task"
-          value={this.state.text}
+          value={text}
           onChange={this.handleChange}
         />
         <div className="add-card-form__footer">
@@ -48,8 +54,9 @@ class Form extends React.Component {
   }
 
   handleSubmit = ev => {
+    const { addTask } = this.props;
     ev.preventDefault();
-    this.props.addTask(this.state);
+    addTask(this.state);
     this.setState({
       text: ""
     });

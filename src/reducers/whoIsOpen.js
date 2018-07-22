@@ -8,6 +8,6 @@ export default (whoIsOpen = true, action) => {
       return whoIsOpen ? null : payload;
 
     default:
-      return !whoIsOpen;
+      return null;
   }
 };

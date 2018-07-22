@@ -24,8 +24,8 @@ class Add extends React.Component {
   };
 
   get formIsOpen() {
-    const { typeCards } = this.props;
-    if (typeCards !== this.props.whoIsOpen) {
+    const { typeCards, whoIsOpen } = this.props;
+    if (typeCards !== whoIsOpen) {
       return null;
     }
     return <Form type={typeCards} />;

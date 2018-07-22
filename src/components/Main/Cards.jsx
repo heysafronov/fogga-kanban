@@ -5,7 +5,7 @@ import ClassNames from "classnames";
 
 class Cards extends React.PureComponent {
   render() {
-    const { name, style } = this.props;
+    const { name, style, type } = this.props;
     const classes = ClassNames("card-wrapper", style);
     return (
       <div className={classes}>
@@ -17,7 +17,7 @@ class Cards extends React.PureComponent {
         </div>
         <div className="cards">
           {this.CardsList}
-          <Add typeCards={this.props.type} />
+          <Add typeCards={type} />
         </div>
       </div>
     );
