@@ -183,6 +183,11 @@
   font-family: "Roboto", sans-serif;
 }
 
+.add-card-form__main::placeholder {
+  color: var(--colorBarW);
+  font-style: italic;
+}
+
 .add-card-form__footer {
   display: flex;
   justify-content: space-between;
@@ -280,7 +285,6 @@
   align-items: center;
   justify-content: center;
   margin: 10px 0 15px 10px;
-  cursor: pointer;
 }
 
 .card-color-low {
@@ -348,7 +352,6 @@
 
 .comments-ico, .attach-ico {
   font-size: 13px;
-  cursor: pointer;
 }
 
 .comments-num, .attach-num {

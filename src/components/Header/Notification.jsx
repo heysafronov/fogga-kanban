@@ -12,8 +12,8 @@ class Notification extends React.Component {
             <span>@Victoria:</span>
           </div>
           <div className="notification-text">
-            Stream Bomb Has Been Planted by Liquor Jim from desktop or your
-            mobile device.
+            React can also render on the server using Node and power mobile apps
+            using React Native.
           </div>
         </div>
       </div>

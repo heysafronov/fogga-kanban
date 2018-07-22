@@ -5,12 +5,17 @@ import { whoIsOpen } from "../../actions";
 
 class Add extends React.Component {
   render() {
+    const { typeCards, whoIsOpen } = this.props;
     return (
       <React.Fragment>
         <div onClick={this.handleToggle} className="card-wrapper__footer">
           <div className="add-task">Add task</div>
           <div className="add-task-ico">
-            <i className="material-icons">add_circle_outline</i>
+            <i className="material-icons">
+              {typeCards === whoIsOpen
+                ? "remove_circle_outline"
+                : "add_circle_outline"}
+            </i>
           </div>
         </div>
         {this.formIsOpen}

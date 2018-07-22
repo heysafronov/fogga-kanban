@@ -7,14 +7,16 @@ import { toggleCards } from "../../actions";
 
 class Cards extends React.PureComponent {
   render() {
-    const { name, style } = this.props;
+    const { name, style, toggleCardsState, type } = this.props;
     const classes = ClassNames("card-wrapper", style);
     return (
       <div className={classes}>
         <div className="card-wrapper__header">
           <div className="backlog-name">{name}</div>
           <div onClick={this.handleToggle} className="backlog-dots">
-            <i className="material-icons">expand_more</i>
+            <i className="material-icons">
+              {toggleCardsState === type ? "chevron_right" : "expand_more"}
+            </i>
           </div>
         </div>
         {this.cardsContainer}
