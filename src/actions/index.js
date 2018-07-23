@@ -15,7 +15,8 @@ export function boardOpen() {
 export function addTask(task) {
   return {
     type: ADD_TASK,
-    payload: task
+    payload: { task },
+    generateId: true
   };
 }
 

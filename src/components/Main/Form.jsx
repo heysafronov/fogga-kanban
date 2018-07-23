@@ -1,22 +1,17 @@
 import React from "react";
 import { connect } from "react-redux";
 import { addTask } from "../../actions/";
-import {
-  filtratedTasksBacklog,
-  filtratedTasksComplete, filtratedTasksProgress,
-  filtratedTasksReview
-} from "../../selectors";
 
 class Form extends React.Component {
   state = {
     id: "8tlgjfek",
     type: "",
     priority: "low",
-    user: "C. Guvert",
+    user: "M. Thompson",
     text: "",
-    avatar: "/src/assets/img/guvert.jpg",
-    attach: "2",
-    comments: "1"
+    avatar: "./41aad055f35eb28f42b84ca1b4cf5d53.jpg",
+    attach: "0",
+    comments: "0"
   };
 
   render() {

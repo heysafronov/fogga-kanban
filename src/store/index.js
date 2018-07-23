@@ -1,7 +1,9 @@
-import { createStore } from "redux";
+import { createStore, applyMiddleware } from "redux";
 import reducers from "../reducers";
+import randomId from "../middlewares/randomId";
 
-const store = createStore(reducers);
+const enhancer = applyMiddleware(randomId);
+const store = createStore(reducers, enhancer);
 window.store = store;
 //DEV
 export default store;
