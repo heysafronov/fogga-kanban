@@ -4,7 +4,7 @@ import { addTask } from "../../actions/";
 
 class Form extends React.Component {
   state = {
-    id: "8tlgjfek",
+    id: "",
     type: "",
     priority: "low",
     user: "M. Thompson",
