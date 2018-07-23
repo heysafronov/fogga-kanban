@@ -2,12 +2,15 @@ import React from "react";
 import Card from "./Card.jsx";
 import Add from "./Add.jsx";
 import ClassNames from "classnames";
-import { connect } from "react-redux";
-import { toggleCards } from "../../actions";
 
 class Cards extends React.PureComponent {
+  state = {
+    openCards: true
+  };
+
   render() {
-    const { name, style, toggleCardsState, type } = this.props;
+    const { openCards } = this.state;
+    const { name, style } = this.props;
     const classes = ClassNames("card-wrapper", style);
     return (
       <div className={classes}>
@@ -15,7 +18,7 @@ class Cards extends React.PureComponent {
           <div className="backlog-name">{name}</div>
           <div onClick={this.handleToggle} className="backlog-dots">
             <i className="material-icons">
-              {toggleCardsState === type ? "chevron_right" : "expand_more"}
+              {openCards ? "expand_more" : "chevron_right"}
             </i>
           </div>
         </div>
@@ -25,13 +28,15 @@ class Cards extends React.PureComponent {
   }
 
   handleToggle = () => {
-    const { toggleCards, type } = this.props;
-    toggleCards(type);
+    return this.setState(prevState => {
+      return { openCards: !prevState.openCards };
+    });
   };
 
   get cardsContainer() {
-    const { type, toggleCardsState } = this.props;
-    if (type === toggleCardsState) {
+    const { type } = this.props;
+    const { openCards } = this.state;
+    if (!openCards) {
       return null;
     }
     return (
@@ -52,11 +57,4 @@ class Cards extends React.PureComponent {
   }
 }
 
-const mapStateToProps = state => ({
-  toggleCardsState: state.toggleCards
-});
-
-export default connect(
-  mapStateToProps,
-  { toggleCards }
-)(Cards);
+export default Cards;
