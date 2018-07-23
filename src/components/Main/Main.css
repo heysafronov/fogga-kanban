@@ -176,11 +176,15 @@
   border: none;
   padding: 10px;
   color: var(--colorName);
-  outline: none;
+  outline-color: var(--colorWhite);
   border-radius: 5px;
   height: 40px;
   margin: 10px 0 10px 0;
   font-family: "Roboto", sans-serif;
+}
+
+.add-card-form__main-error {
+  outline-color: pink;
 }
 
 .add-card-form__main::placeholder {
@@ -326,6 +330,7 @@
   font-size: 16px;
   font-weight: 400;
   margin: 0 10px;
+  word-wrap: break-word;
 }
 
 .card__menu {

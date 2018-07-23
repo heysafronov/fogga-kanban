@@ -50,9 +50,9 @@ class Cards extends React.PureComponent {
   get cardsList() {
     const { data } = this.props;
     return data.map(item => (
-      <div key={item.id}>
+      <React.Fragment key={item.id}>
         <Card data={item} />
-      </div>
+      </React.Fragment>
     ));
   }
 }

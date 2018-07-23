@@ -1,4 +1,5 @@
 import React from "react";
+import ClassNames from "classnames";
 import { connect } from "react-redux";
 import { addTask } from "../../actions/";
 
@@ -16,6 +17,7 @@ class Form extends React.Component {
 
   render() {
     const { text } = this.state;
+    // const errorS = ClassNames("add-card-form__main", "add-card-form__main-error");
     return (
       <form
         onSubmit={this.handleSubmit}
@@ -27,7 +29,7 @@ class Form extends React.Component {
           <div className="from__high-pr">High Priority</div>
         </div>
         <textarea
-          className="add-card-form__main"
+          className={this.getClassName()}
           type="text"
           placeholder="Write your task"
           value={text}
@@ -42,7 +44,12 @@ class Form extends React.Component {
               <i className="material-icons">attach_file</i>
             </div>
           </div>
-          <input className="form-add-btn" type="submit" value="Add" />
+          <input
+            className="form-add-btn"
+            type="submit"
+            value="Add"
+            disabled={!this.isValidField()}
+          />
         </div>
       </form>
     );
@@ -59,12 +66,27 @@ class Form extends React.Component {
 
   handleChange = ev => {
     const { type } = this.props;
-    this.setState({
-      text: ev.target.value,
-      type: type
-    });
+    const { value } = ev.target;
+    if (value.length < limits.max)
+      return this.setState({
+        text: value,
+        type: type
+      });
+
   };
+
+  isValidField = () => this.state.text.length >= limits.min;
+
+  getClassName = () =>
+    this.isValidField()
+      ? "add-card-form__main"
+      : "add-card-form__main-error add-card-form__main";
 }
+
+const limits = {
+  min: 5,
+  max: 100
+};
 
 export default connect(
   null,
