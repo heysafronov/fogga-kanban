@@ -17,19 +17,23 @@
 }
 
 .backlog-color {
-  background-image: linear-gradient(#f6f8fc, #f6f8fc), radial-gradient(circle at top left, #c781ff, #e57373);
+  background-image: linear-gradient(#f6f8fc, #f6f8fc),
+    radial-gradient(circle at top left, #c781ff, #e57373);
 }
 
 .in-progress-color {
-  background-image: linear-gradient(#f6f8fc, #f6f8fc), radial-gradient(circle at top left, #ff9985, #ffb74e);
+  background-image: linear-gradient(#f6f8fc, #f6f8fc),
+    radial-gradient(circle at top left, #ff9985, #ffb74e);
 }
 
 .review-color {
-  background-image: linear-gradient(#f6f8fc, #f6f8fc), radial-gradient(circle at top left, #9ea7fc, #6eb4f7);
+  background-image: linear-gradient(#f6f8fc, #f6f8fc),
+    radial-gradient(circle at top left, #9ea7fc, #6eb4f7);
 }
 
 .complete-color {
-  background-image: linear-gradient(#f6f8fc, #f6f8fc), radial-gradient(circle at top left, #81d5ee, #7ed492);
+  background-image: linear-gradient(#f6f8fc, #f6f8fc),
+    radial-gradient(circle at top left, #81d5ee, #7ed492);
 }
 
 .card-wrapper {
@@ -109,7 +113,7 @@
   align-items: flex-end;
 }
 
-.from__low-pr {
+.form__low-pr {
   font-size: 12px;
   color: var(--colorWhite);
   border-radius: 3px;
@@ -119,14 +123,14 @@
   align-items: center;
   justify-content: center;
   background: var(--colorBar);
-  cursor: pointer;
 }
 
-.from__low-pr:hover {
+.form__low-pr input[type="checkbox"]:checked + .form__label {
   background: linear-gradient(90deg, #9ea7fc 17%, #6eb4f7 83%);
 }
 
-.from__med-pr {
+.form__label {
+  position: relative;
   font-size: 12px;
   color: var(--colorWhite);
   border-radius: 3px;
@@ -136,14 +140,34 @@
   align-items: center;
   justify-content: center;
   background: var(--colorBar);
+}
+
+.form__checkbox {
+  opacity: 0;
+  width: 80px;
+  height: 20px;
+  position: absolute;
+  z-index: 1;
   cursor: pointer;
 }
 
-.from__med-pr:hover {
+.form__med-pr {
+  font-size: 12px;
+  color: var(--colorWhite);
+  border-radius: 3px;
+  height: 20px;
+  width: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--colorBar);
+}
+
+.form__med-pr input[type="checkbox"]:checked + .form__label {
   background: linear-gradient(138.6789deg, #81d5ee 17%, #7ed492 83%);
 }
 
-.from__high-pr {
+.form__high-pr {
   font-size: 12px;
   color: var(--colorWhite);
   border-radius: 3px;
@@ -156,7 +180,7 @@
   cursor: pointer;
 }
 
-.from__high-pr:hover {
+.form__high-pr input[type="checkbox"]:checked + .form__label {
   background: linear-gradient(138.6789deg, #c781ff 17%, #e57373 83%);
 }
 
@@ -273,7 +297,8 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  cursor: url(https://ssl.gstatic.com/ui/v1/icons/mail/images/2/openhand.cur), default !important;
+  cursor: url(https://ssl.gstatic.com/ui/v1/icons/mail/images/2/openhand.cur),
+    default !important;
 }
 
 .card__header {
@@ -345,21 +370,27 @@
   justify-content: space-between;
 }
 
-.comments-wrapper, .attach-wrapper {
+.comments-wrapper,
+.attach-wrapper {
   display: flex;
 }
 
-.comments-ico, .comments-num, .attach-ico, .attach-num {
+.comments-ico,
+.comments-num,
+.attach-ico,
+.attach-num {
   color: var(--colorBarW);
   display: flex;
   align-items: center;
 }
 
-.comments-ico, .attach-ico {
+.comments-ico,
+.attach-ico {
   font-size: 13px;
 }
 
-.comments-num, .attach-num {
+.comments-num,
+.attach-num {
   font-size: 14px;
   margin-left: 5px;
 }

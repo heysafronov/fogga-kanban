@@ -1,5 +1,4 @@
 import React from "react";
-import ClassNames from "classnames";
 import { connect } from "react-redux";
 import { addTask } from "../../actions/";
 
@@ -17,16 +16,30 @@ class Form extends React.Component {
 
   render() {
     const { text } = this.state;
-    // const errorS = ClassNames("add-card-form__main", "add-card-form__main-error");
     return (
       <form
         onSubmit={this.handleSubmit}
         className="add-card-form add-card-form-true"
       >
         <div className="add-card-form__header">
-          <div className="from__low-pr">Low Priority</div>
-          <div className="from__med-pr">Med Priority</div>
-          <div className="from__high-pr">High Priority</div>
+          <div className="form__low-pr">
+            <input className="form__checkbox" type="checkbox" name="low" />
+            <label className="form__label" htmlFor="low">
+              Low Priority
+            </label>
+          </div>
+          <div className="form__med-pr">
+            <input className="form__checkbox" type="checkbox" name="med" />
+            <label className="form__label" htmlFor="med">
+              Med Priority
+            </label>
+          </div>
+          <div className="form__high-pr">
+            <input className="form__checkbox" type="checkbox" name="high" />
+            <label className="form__label" htmlFor="high">
+              High Priority
+            </label>
+          </div>
         </div>
         <textarea
           className={this.getClassName()}
@@ -72,7 +85,6 @@ class Form extends React.Component {
         text: value,
         type: type
       });
-
   };
 
   isValidField = () => this.state.text.length >= limits.min;
