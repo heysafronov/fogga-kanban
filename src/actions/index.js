@@ -2,8 +2,7 @@ import {
   ADD_TASK,
   BOARD_OPEN,
   DELETE_TASK,
-  WHO_OPEN,
-  TOGGLE_CARDS
+  WHO_OPEN
 } from "../constants";
 
 export function boardOpen() {
