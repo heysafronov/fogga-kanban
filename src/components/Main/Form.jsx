@@ -88,9 +88,10 @@ class Form extends React.Component {
   }
 
   handleOption = ev => {
+    const { value, alt } = ev.target;
     this.setState({
-      style: ev.target.value,
-      priority: ev.target.alt
+      style: value,
+      priority: alt
     });
   };
 
@@ -113,7 +114,10 @@ class Form extends React.Component {
       });
   };
 
-  isValidField = () => this.state.text.length >= limits.min;
+  isValidField = () => {
+    const { text } = this.state;
+    return text.length >= limits.min;
+  };
 
   getClassName = () =>
     this.isValidField()
