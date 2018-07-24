@@ -99,9 +99,6 @@ class Form extends React.Component {
     const { addTask } = this.props;
     ev.preventDefault();
     addTask(this.state);
-    this.setState({
-      text: ""
-    });
   };
 
   handleChange = ev => {
