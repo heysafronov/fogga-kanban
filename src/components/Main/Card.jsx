@@ -8,7 +8,11 @@ class Card extends React.Component {
     const { data } = this.props;
     const style = ClassNames("card-container-color", data.style);
     return (
-      <div className="card" draggable="true">
+      <div
+        className="card"
+        draggable="true"
+        onDragStart={e => this.onDragStart(e, this.props.data.id)}
+      >
         <div className="card__header">
           <div className={style}>
             <div className="card__header-priority">{data.priority}</div>
@@ -45,6 +49,10 @@ class Card extends React.Component {
       </div>
     );
   }
+
+  onDragStart = (ev, id) => {
+    ev.dataTransfer.setData("text/html", id);
+  };
 
   handleDelete = () => {
     const { data, deleteTask } = this.props;

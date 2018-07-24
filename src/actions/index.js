@@ -32,3 +32,10 @@ export function deleteTask(id) {
     payload: { id }
   };
 }
+
+export function XYU(ev, cat) {
+  return {
+    type: "XYU",
+    payload: {ev, cat}
+  };
+}

@@ -14,6 +14,22 @@ export default (tasks = normalizedTasks, action) => {
         id: randomId
       });
 
+    case "XYU":
+      let id = payload.ev.dataTransfer.getData("text/html");
+
+      let newtasks = tasks.filter((task) => {
+        if (task.id === id) {
+          task.type = payload.cat;
+        }
+        return task;
+      });
+
+      return tasks.concat({
+        ...tasks,
+        newtasks
+      });
+
+
     default:
       return tasks;
   }

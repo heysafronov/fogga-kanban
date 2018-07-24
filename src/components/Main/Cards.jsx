@@ -2,6 +2,8 @@ import React from "react";
 import Card from "./Card.jsx";
 import Add from "./Add.jsx";
 import ClassNames from "classnames";
+import { XYU } from "../../actions/";
+import { connect } from "react-redux";
 
 class Cards extends React.PureComponent {
   state = {
@@ -40,12 +42,26 @@ class Cards extends React.PureComponent {
       return null;
     }
     return (
-      <div className="cards">
+      <div
+        className="cards"
+        onDragOver={e => this.onDragOver(e)}
+        onDrop={e => {
+          this.onDrop(e, this.props.data[0].type);
+        }}
+      >
         {this.cardsList}
         <Add typeCards={type} />
       </div>
     );
   }
+
+  onDragOver = (ev) => {
+    ev.preventDefault();
+  };
+
+  onDrop = (ev, cat) => {
+    this.props.XYU(ev, cat);
+  };
 
   get cardsList() {
     const { data } = this.props;
@@ -57,4 +73,4 @@ class Cards extends React.PureComponent {
   }
 }
 
-export default Cards;
+export default connect(null, { XYU })(Cards);
