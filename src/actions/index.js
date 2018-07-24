@@ -33,10 +33,3 @@ export function deleteTask(id) {
     payload: { id }
   };
 }
-
-export function toggleCards(type) {
-  return {
-    type: TOGGLE_CARDS,
-    payload: type
-  };
-}
