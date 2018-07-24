@@ -6,12 +6,13 @@ class Form extends React.Component {
   state = {
     id: "",
     type: "",
-    priority: "low",
+    priority: "",
     user: "M. Thompson",
     text: "",
     avatar: "./41aad055f35eb28f42b84ca1b4cf5d53.jpg",
+    comments: "0",
     attach: "0",
-    comments: "0"
+    style: ""
   };
 
   render() {
@@ -22,21 +23,39 @@ class Form extends React.Component {
         className="add-card-form add-card-form-true"
       >
         <div className="add-card-form__header">
-          <div className="form__low-pr">
-            <input className="form__checkbox" type="checkbox" name="low" />
-            <label className="form__label" htmlFor="low">
+          <div onClick={this.handleOption} className="form__low-pr">
+            <input
+              className="form__checkbox"
+              type="radio"
+              name="priority"
+              value="card-color-low"
+              alt="Low Priority"
+            />
+            <label className="form__label" htmlFor="Low Priority">
               Low Priority
             </label>
           </div>
-          <div className="form__med-pr">
-            <input className="form__checkbox" type="checkbox" name="med" />
-            <label className="form__label" htmlFor="med">
+          <div onClick={this.handleOption} className="form__med-pr">
+            <input
+              className="form__checkbox"
+              type="radio"
+              name="priority"
+              value="card-color-med"
+              alt="Med Priority"
+            />
+            <label className="form__label" htmlFor="Med Priority">
               Med Priority
             </label>
           </div>
-          <div className="form__high-pr">
-            <input className="form__checkbox" type="checkbox" name="high" />
-            <label className="form__label" htmlFor="high">
+          <div onClick={this.handleOption} className="form__high-pr">
+            <input
+              className="form__checkbox"
+              type="radio"
+              name="priority"
+              value="card-color-high"
+              alt="High Priority"
+            />
+            <label className="form__label" htmlFor="High Priority">
               High Priority
             </label>
           </div>
@@ -67,6 +86,13 @@ class Form extends React.Component {
       </form>
     );
   }
+
+  handleOption = ev => {
+    this.setState({
+      style: ev.target.value,
+      priority: ev.target.alt
+    });
+  };
 
   handleSubmit = ev => {
     const { addTask } = this.props;

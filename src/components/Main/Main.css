@@ -125,7 +125,7 @@
   background: var(--colorBar);
 }
 
-.form__low-pr input[type="checkbox"]:checked + .form__label {
+.form__low-pr input[type="radio"]:checked + .form__label {
   background: linear-gradient(90deg, #9ea7fc 17%, #6eb4f7 83%);
 }
 
@@ -163,7 +163,7 @@
   background: var(--colorBar);
 }
 
-.form__med-pr input[type="checkbox"]:checked + .form__label {
+.form__med-pr input[type="radio"]:checked + .form__label {
   background: linear-gradient(138.6789deg, #81d5ee 17%, #7ed492 83%);
 }
 
@@ -180,7 +180,7 @@
   cursor: pointer;
 }
 
-.form__high-pr input[type="checkbox"]:checked + .form__label {
+.form__high-pr input[type="radio"]:checked + .form__label {
   background: linear-gradient(138.6789deg, #c781ff 17%, #e57373 83%);
 }
 
