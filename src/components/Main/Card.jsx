@@ -8,7 +8,7 @@ class Card extends React.Component {
     const { data } = this.props;
     const style = ClassNames("card-container-color", data.style);
     return (
-      <div className="card">
+      <div className="card" draggable="true">
         <div className="card__header">
           <div className={style}>
             <div className="card__header-priority">{data.priority}</div>
