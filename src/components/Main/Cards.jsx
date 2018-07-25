@@ -2,8 +2,8 @@ import React from "react";
 import Card from "./Card.jsx";
 import Add from "./Add.jsx";
 import ClassNames from "classnames";
-import { dragAndDrop } from "../../actions/";
 import { connect } from "react-redux";
+import { dragAndDrop } from "../../actions/";
 
 class Cards extends React.PureComponent {
   state = {
