@@ -12,11 +12,11 @@ class Cards extends React.PureComponent {
   };
 
   render() {
-    const { openCards } = this.state;
+    const { openCards, dropping } = this.state;
     const { name, style } = this.props;
     const classes = ClassNames({
       "card-wrapper": true,
-      "cards-dropping": this.state.dropping
+      "cards-dropping": dropping
     });
     const styleClass = ClassNames(style);
     return (
