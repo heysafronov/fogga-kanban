@@ -245,19 +245,28 @@
   display: flex;
 }
 
-.form-add-btn {
+.form-add-btn:disabled {
+  border: none;
+  color: var(--colorWhite);
+  padding: 5px 10px 5px 10px;
+  border-radius: 5px;
+  outline: none;
+  cursor: not-allowed;
+  background: var(--colorBar);
+}
+
+.form-add-btn:enabled {
   border: none;
   color: var(--colorWhite);
   padding: 5px 10px 5px 10px;
   border-radius: 5px;
   outline: none;
   cursor: pointer;
-  background: var(--colorBar);
+  background: var(--colorLogo);
   transition: 0.4s;
 }
 
-.form-add-btn:hover {
-  background: var(--colorLogo);
+.form-add-btn:enabled:hover {
   box-shadow: 0px 0px 10px 0px var(--colorLogo);
 }
 

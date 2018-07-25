@@ -112,14 +112,16 @@ class Form extends React.Component {
   };
 
   isValidField = () => {
-    const { text } = this.state;
-    return text.length >= limits.min;
+    const { text, priority } = this.state;
+    return text.length >= limits.min && priority;
   };
 
-  getClassName = () =>
-    this.isValidField()
+  getClassName = () => {
+    const { text } = this.state;
+    return text.length >= limits.min
       ? "add-card-form__main"
       : "add-card-form__main-error add-card-form__main";
+  };
 }
 
 const limits = {
