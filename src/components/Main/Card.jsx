@@ -4,11 +4,19 @@ import { connect } from "react-redux";
 import { deleteTask } from "../../actions/";
 
 class Card extends React.Component {
+  state = {
+    dragging: false
+  };
+
   render() {
     const { data } = this.props;
     const style = ClassNames("card-container-color", data.style);
+    const ggg = ClassNames({
+      "card": true,
+      "card-dragging": this.state.dragging
+    });
     return (
-      <div className="card" draggable="true" onDragStart={this.forDragStart}>
+      <div className={ggg} draggable="true" onDragStart={this.forDragStart}>
         <div className="card__header">
           <div className={style}>
             <div className="card__header-priority">{data.priority}</div>
@@ -52,6 +60,9 @@ class Card extends React.Component {
   };
 
   onDragStart = (ev, id) => {
+    this.setState({
+      dragging: !this.state.dragging
+    });
     ev.dataTransfer.setData("text/html", id);
   };
 

@@ -301,6 +301,17 @@
     default !important;
 }
 
+.card-dragging {
+  border: 1px dashed var(--colorBarW);
+  background: repeating-linear-gradient(
+    45deg,
+    white,
+    white 5px,
+    var(--colorNav) 5px,
+    var(--colorNav) 10px
+  );
+}
+
 .card__header {
   display: flex;
   justify-content: space-between;
