@@ -1,5 +1,5 @@
 import { normalizedTasks } from "../api/data";
-import { ADD_TASK, DELETE_TASK } from "../constants";
+import { ADD_TASK, DELETE_TASK, DRAG_AND_DROP } from "../constants";
 
 export default (tasks = normalizedTasks, action) => {
   const { type, payload, randomId } = action;
@@ -14,7 +14,7 @@ export default (tasks = normalizedTasks, action) => {
         id: randomId
       });
 
-    case "XYU":
+    case DRAG_AND_DROP:
       let id = payload.ev.dataTransfer.getData("text/html");
 
       let filteredTasks = tasks.filter(task => {

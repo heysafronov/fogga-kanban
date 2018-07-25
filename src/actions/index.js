@@ -2,7 +2,8 @@ import {
   ADD_TASK,
   BOARD_OPEN,
   DELETE_TASK,
-  WHO_OPEN
+  WHO_OPEN,
+  DRAG_AND_DROP
 } from "../constants";
 
 export function boardOpen() {
@@ -35,7 +36,7 @@ export function deleteTask(id) {
 
 export function XYU(ev, cat) {
   return {
-    type: "XYU",
+    type: DRAG_AND_DROP,
     payload: {ev, cat}
   };
 }
