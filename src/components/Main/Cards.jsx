@@ -45,9 +45,7 @@ class Cards extends React.PureComponent {
       <div
         className="cards"
         onDragOver={this.forDragOver}
-        onDrop={e => {
-          this.onDrop(e, this.props.data[0].type);
-        }}
+        onDrop={this.forDrop}
       >
         {this.cardsList}
         <Add typeCards={type} />
@@ -61,6 +59,11 @@ class Cards extends React.PureComponent {
 
   onDragOver = ev => {
     ev.preventDefault();
+  };
+
+  forDrop = ev => {
+    const { data } = this.props;
+    this.onDrop(ev, data[0].type);
   };
 
   onDrop = (ev, cat) => {
@@ -77,4 +80,7 @@ class Cards extends React.PureComponent {
   }
 }
 
-export default connect(null, { dragAndDrop })(Cards);
+export default connect(
+  null,
+  { dragAndDrop }
+)(Cards);
