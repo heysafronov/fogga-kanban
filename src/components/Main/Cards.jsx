@@ -44,7 +44,7 @@ class Cards extends React.PureComponent {
     return (
       <div
         className="cards"
-        onDragOver={e => this.onDragOver(e)}
+        onDragOver={this.forDragOver}
         onDrop={e => {
           this.onDrop(e, this.props.data[0].type);
         }}
@@ -55,7 +55,11 @@ class Cards extends React.PureComponent {
     );
   }
 
-  onDragOver = (ev) => {
+  forDragOver = ev => {
+    this.onDragOver(ev);
+  };
+
+  onDragOver = ev => {
     ev.preventDefault();
   };
 
