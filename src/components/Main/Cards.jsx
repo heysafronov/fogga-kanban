@@ -7,15 +7,26 @@ import { dragAndDrop } from "../../actions/";
 
 class Cards extends React.PureComponent {
   state = {
-    openCards: true
+    openCards: true,
+    dropping: false
   };
 
   render() {
     const { openCards } = this.state;
     const { name, style } = this.props;
-    const classes = ClassNames("card-wrapper", style);
+    const classes = ClassNames({
+      "card-wrapper": true,
+      style: true,
+      ggg: this.state.dropping
+    });
     return (
-      <div className={classes}>
+      <div
+        className={classes}
+        onDragOver={this.forDragOver}
+        onDrop={this.forDrop}
+        onDragEnter={this.onDragEnter}
+        onDragLeave={this.onDragLeave}
+      >
         <div className="card-wrapper__header">
           <div className="backlog-name">{name}</div>
           <div onClick={this.handleToggle} className="backlog-dots">
@@ -42,11 +53,7 @@ class Cards extends React.PureComponent {
       return null;
     }
     return (
-      <div
-        className="cards"
-        onDragOver={this.forDragOver}
-        onDrop={this.forDrop}
-      >
+      <div className="cards">
         {this.cardsList}
         <Add typeCards={type} />
       </div>
@@ -62,12 +69,27 @@ class Cards extends React.PureComponent {
   };
 
   forDrop = ev => {
-    const { data } = this.props;
-    this.onDrop(ev, data[0].type);
+    const { type } = this.props;
+    this.onDrop(ev, type);
+  };
+
+  onDragEnter = () => {
+    this.setState(prevState => {
+      return { dropping: !prevState.dropping };
+    });
   };
 
   onDrop = (ev, cat) => {
     this.props.dragAndDrop(ev, cat);
+    this.setState({
+      dropping: false
+    });
+  };
+
+  onDragLeave = () => {
+    this.setState(prevState => {
+      return { dropping: !prevState.dropping };
+    });
   };
 
   get cardsList() {
