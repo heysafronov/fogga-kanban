@@ -161,7 +161,7 @@ body {
   position: absolute;
   top: 67px;
   left: 3px;
-  width: 75px;
+  width: 79px;
   color: var(--colorName);
   font-size: 12px;
   padding: 10px;
@@ -189,6 +189,7 @@ body {
 
 .mail-icon:hover .mail-icon__notification {
   display: flex;
+  justify-content: center;
 }
 
 .notification-icon__alert {
@@ -805,6 +806,7 @@ body {
   height: 40px;
   margin: 10px 0 10px 0;
   font-family: "Roboto", sans-serif;
+  font-size: 13px;
 }
 
 .add-card-form__main-error {
@@ -814,6 +816,7 @@ body {
 .add-card-form__main::placeholder {
   color: var(--colorBarW);
   font-style: italic;
+  font-size: 13px;
 }
 
 .add-card-form__footer {
@@ -850,7 +853,6 @@ body {
   border-radius: 5px;
   outline: none;
   cursor: pointer;
-  height: 25px;
   background: var(--colorBar);
   transition: 0.4s;
 }
@@ -899,6 +901,28 @@ body {
   justify-content: space-between;
   cursor: url(https://ssl.gstatic.com/ui/v1/icons/mail/images/2/openhand.cur),
     default !important;
+}
+
+.card-dragging {
+  border: 1px dashed var(--colorBarW);
+  background: repeating-linear-gradient(
+    45deg,
+    white,
+    white 5px,
+    var(--colorNav) 5px,
+    var(--colorNav) 10px
+  );
+}
+
+.cards-dropping {
+  background: repeating-linear-gradient(
+    45deg,
+    white,
+    white 5px,
+    var(--colorNav) 5px,
+    var(--colorNav) 10px
+  );
+  background-clip: content-box, border-box;
 }
 
 .card__header {
@@ -1062,4 +1086,4 @@ body {
 
 
 
-/*# sourceMappingURL=style.48abfc4a48f972a7865e.css.map*/
+/*# sourceMappingURL=style.7ecfafea0237d98a366d.css.map*/
