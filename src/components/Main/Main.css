@@ -205,6 +205,7 @@
   height: 40px;
   margin: 10px 0 10px 0;
   font-family: "Roboto", sans-serif;
+  font-size: 13px;
 }
 
 .add-card-form__main-error {
@@ -214,6 +215,7 @@
 .add-card-form__main::placeholder {
   color: var(--colorBarW);
   font-style: italic;
+  font-size: 13px;
 }
 
 .add-card-form__footer {
@@ -250,7 +252,6 @@
   border-radius: 5px;
   outline: none;
   cursor: pointer;
-  height: 25px;
   background: var(--colorBar);
   transition: 0.4s;
 }
@@ -320,6 +321,7 @@
     var(--colorNav) 5px,
     var(--colorNav) 10px
   );
+  border-top: double 4px transparent;
 }
 
 .card__header {

@@ -21,7 +21,7 @@ class Cards extends React.PureComponent {
     const styleClass = ClassNames(style);
     return (
       <div
-        className={classes}
+        className={styleClass + " " + classes}
         onDragOver={this.forDragOver}
         onDrop={this.forDrop}
         onDragEnter={this.onDragEnter}

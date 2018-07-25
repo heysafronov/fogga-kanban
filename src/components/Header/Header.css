@@ -41,7 +41,7 @@
   position: absolute;
   top: 67px;
   left: 3px;
-  width: 75px;
+  width: 79px;
   color: var(--colorName);
   font-size: 12px;
   padding: 10px;
@@ -69,6 +69,7 @@
 
 .mail-icon:hover .mail-icon__notification {
   display: flex;
+  justify-content: center;
 }
 
 .notification-icon__alert {
