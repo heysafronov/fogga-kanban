@@ -321,7 +321,6 @@
     var(--colorNav) 5px,
     var(--colorNav) 10px
   );
-  border-top: double 4px transparent;
 }
 
 .card__header {
