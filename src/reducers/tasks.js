@@ -16,14 +16,12 @@ export default (tasks = normalizedTasks, action) => {
 
     case DRAG_AND_DROP:
       let id = payload.ev.dataTransfer.getData("text/html");
-
       let filteredTasks = tasks.filter(task => {
         if (task.id === id) {
           task.type = payload.cat;
         }
         return task;
       });
-
       return (tasks = filteredTasks);
 
     default:
