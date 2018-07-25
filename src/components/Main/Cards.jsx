@@ -2,7 +2,7 @@ import React from "react";
 import Card from "./Card.jsx";
 import Add from "./Add.jsx";
 import ClassNames from "classnames";
-import { XYU } from "../../actions/";
+import { dragAndDrop } from "../../actions/";
 import { connect } from "react-redux";
 
 class Cards extends React.PureComponent {
@@ -60,7 +60,7 @@ class Cards extends React.PureComponent {
   };
 
   onDrop = (ev, cat) => {
-    this.props.XYU(ev, cat);
+    this.props.dragAndDrop(ev, cat);
   };
 
   get cardsList() {
@@ -73,4 +73,4 @@ class Cards extends React.PureComponent {
   }
 }
 
-export default connect(null, { XYU })(Cards);
+export default connect(null, { dragAndDrop })(Cards);
