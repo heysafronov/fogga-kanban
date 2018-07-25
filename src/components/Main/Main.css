@@ -312,8 +312,14 @@
   );
 }
 
-.ggg {
-  background-color: pink;
+.cards-dropping {
+  background: repeating-linear-gradient(
+    45deg,
+    white,
+    white 5px,
+    var(--colorNav) 5px,
+    var(--colorNav) 10px
+  );
 }
 
 .card__header {

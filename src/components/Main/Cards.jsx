@@ -16,9 +16,9 @@ class Cards extends React.PureComponent {
     const { name, style } = this.props;
     const classes = ClassNames({
       "card-wrapper": true,
-      style: true,
-      ggg: this.state.dropping
+      "cards-dropping": this.state.dropping
     });
+    const styleClass = ClassNames(style);
     return (
       <div
         className={classes}
