@@ -10,13 +10,18 @@ class Card extends React.Component {
 
   render() {
     const { data } = this.props;
+    const { dragging } = this.state;
     const style = ClassNames("card-container-color", data.style);
-    const ggg = ClassNames({
+    const dragAndDrop = ClassNames({
       "card": true,
-      "card-dragging": this.state.dragging
+      "card-dragging": dragging
     });
     return (
-      <div className={ggg} draggable="true" onDragStart={this.forDragStart}>
+      <div
+        className={dragAndDrop}
+        draggable="true"
+        onDragStart={this.forDragStart}
+      >
         <div className="card__header">
           <div className={style}>
             <div className="card__header-priority">{data.priority}</div>
@@ -60,8 +65,8 @@ class Card extends React.Component {
   };
 
   onDragStart = (ev, id) => {
-    this.setState({
-      dragging: !this.state.dragging
+    this.setState(prevState => {
+      return { dragging: !prevState.dragging };
     });
     ev.dataTransfer.setData("text/html", id);
   };
