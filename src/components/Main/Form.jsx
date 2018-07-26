@@ -1,29 +1,24 @@
 import React from "react";
 import { connect } from "react-redux";
 import { addTask } from "../../actions/";
+import setNewTask from "../../hoc/setNewTask";
 
 class Form extends React.Component {
-  state = {
-    id: "",
-    type: "",
-    priority: "",
-    user: "M. Thompson",
-    text: "",
-    avatar: "./41aad055f35eb28f42b84ca1b4cf5d53.jpg",
-    comments: "0",
-    attach: "0",
-    style: ""
-  };
-
   render() {
-    const { text } = this.state;
+    const {
+      text,
+      handleOption,
+      handleChange,
+      isValidField,
+      getClassName
+    } = this.props;
     return (
       <form
         onSubmit={this.handleSubmit}
         className="add-card-form add-card-form-true"
       >
         <div className="add-card-form__header">
-          <div onClick={this.handleOption} className="form__low-pr">
+          <div onClick={handleOption} className="form__low-pr">
             <input
               className="form__checkbox"
               type="radio"
@@ -35,7 +30,7 @@ class Form extends React.Component {
               Low Priority
             </label>
           </div>
-          <div onClick={this.handleOption} className="form__med-pr">
+          <div onClick={handleOption} className="form__med-pr">
             <input
               className="form__checkbox"
               type="radio"
@@ -47,7 +42,7 @@ class Form extends React.Component {
               Med Priority
             </label>
           </div>
-          <div onClick={this.handleOption} className="form__high-pr">
+          <div onClick={handleOption} className="form__high-pr">
             <input
               className="form__checkbox"
               type="radio"
@@ -61,11 +56,11 @@ class Form extends React.Component {
           </div>
         </div>
         <textarea
-          className={this.getClassName()}
+          className={getClassName()}
           type="text"
           placeholder="Write your task"
           value={text}
-          onChange={this.handleChange}
+          onChange={handleChange}
         />
         <div className="add-card-form__footer">
           <div className="form__footer">
@@ -80,56 +75,21 @@ class Form extends React.Component {
             className="form-add-btn"
             type="submit"
             value="Add"
-            disabled={!this.isValidField()}
+            disabled={!isValidField()}
           />
         </div>
       </form>
     );
   }
 
-  handleOption = ev => {
-    const { value, alt } = ev.target;
-    this.setState({
-      style: value,
-      priority: alt
-    });
-  };
-
   handleSubmit = ev => {
     const { addTask } = this.props;
     ev.preventDefault();
-    addTask(this.state);
-  };
-
-  handleChange = ev => {
-    const { type } = this.props;
-    const { value } = ev.target;
-    if (value.length < limits.max)
-      return this.setState({
-        text: value,
-        type: type
-      });
-  };
-
-  isValidField = () => {
-    const { text, priority } = this.state;
-    return text.length >= limits.min && priority;
-  };
-
-  getClassName = () => {
-    const { text } = this.state;
-    return text.length >= limits.min
-      ? "add-card-form__main"
-      : "add-card-form__main-error add-card-form__main";
+    addTask(this.props);
   };
 }
-
-const limits = {
-  min: 5,
-  max: 100
-};
 
 export default connect(
   null,
   { addTask }
-)(Form);
+)(setNewTask(Form));

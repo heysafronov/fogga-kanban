@@ -3,7 +3,7 @@ import ClassNames from "classnames";
 import { connect } from "react-redux";
 import { deleteTask } from "../../actions/";
 
-class Card extends React.Component {
+class Card extends React.PureComponent {
   state = {
     dragging: false
   };
