@@ -13,7 +13,7 @@ class Card extends React.PureComponent {
     const { dragging } = this.state;
     const style = ClassNames("card-container-color", data.style);
     const dragAndDrop = ClassNames({
-      "card": true,
+      card: true,
       "card-dragging": dragging
     });
     return (

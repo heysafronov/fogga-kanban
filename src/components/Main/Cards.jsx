@@ -3,17 +3,25 @@ import Card from "./Card.jsx";
 import Add from "./Add.jsx";
 import ClassNames from "classnames";
 import { connect } from "react-redux";
+import dropping from "../../hoc/dropping";
 import { dragAndDrop } from "../../actions/";
 
 class Cards extends React.PureComponent {
   state = {
-    openCards: true,
-    dropping: false
+    openCards: true
   };
 
   render() {
-    const { openCards, dropping } = this.state;
-    const { name, style } = this.props;
+    const { openCards } = this.state;
+    const {
+      name,
+      style,
+      forDragOver,
+      forDrop,
+      onDragEnter,
+      onDragLeave,
+      dropping
+    } = this.props;
     const classes = ClassNames({
       "card-wrapper": true,
       "cards-dropping": dropping
@@ -22,10 +30,10 @@ class Cards extends React.PureComponent {
     return (
       <div
         className={styleClass + " " + classes}
-        onDragOver={this.forDragOver}
-        onDrop={this.forDrop}
-        onDragEnter={this.onDragEnter}
-        onDragLeave={this.onDragLeave}
+        onDragOver={forDragOver}
+        onDrop={forDrop}
+        onDragEnter={onDragEnter}
+        onDragLeave={onDragLeave}
       >
         <div className="card-wrapper__header">
           <div className="backlog-name">{name}</div>
@@ -60,38 +68,6 @@ class Cards extends React.PureComponent {
     );
   }
 
-  forDragOver = ev => {
-    this.onDragOver(ev);
-  };
-
-  onDragOver = ev => {
-    ev.preventDefault();
-  };
-
-  forDrop = ev => {
-    const { type } = this.props;
-    this.onDrop(ev, type);
-  };
-
-  onDragEnter = () => {
-    this.setState(prevState => {
-      return { dropping: !prevState.dropping };
-    });
-  };
-
-  onDrop = (ev, cat) => {
-    this.props.dragAndDrop(ev, cat);
-    this.setState({
-      dropping: false
-    });
-  };
-
-  onDragLeave = () => {
-    this.setState(prevState => {
-      return { dropping: !prevState.dropping };
-    });
-  };
-
   get cardsList() {
     const { data } = this.props;
     return data.map(item => (
@@ -105,4 +81,4 @@ class Cards extends React.PureComponent {
 export default connect(
   null,
   { dragAndDrop }
-)(Cards);
+)(dropping(Cards));
