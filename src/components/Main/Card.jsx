@@ -1,27 +1,19 @@
 import React from "react";
 import ClassNames from "classnames";
 import { connect } from "react-redux";
+import dragging from "../../hoc/dragging";
 import { deleteTask } from "../../actions/";
 
 class Card extends React.PureComponent {
-  state = {
-    dragging: false
-  };
-
   render() {
-    const { data } = this.props;
-    const { dragging } = this.state;
+    const { data, dragging, forDragStart } = this.props;
     const style = ClassNames("card-container-color", data.style);
     const dragAndDrop = ClassNames({
       card: true,
       "card-dragging": dragging
     });
     return (
-      <div
-        className={dragAndDrop}
-        draggable="true"
-        onDragStart={this.forDragStart}
-      >
+      <div className={dragAndDrop} draggable="true" onDragStart={forDragStart}>
         <div className="card__header">
           <div className={style}>
             <div className="card__header-priority">{data.priority}</div>
@@ -59,18 +51,6 @@ class Card extends React.PureComponent {
     );
   }
 
-  forDragStart = ev => {
-    const { data } = this.props;
-    this.onDragStart(ev, data.id);
-  };
-
-  onDragStart = (ev, id) => {
-    this.setState(prevState => {
-      return { dragging: !prevState.dragging };
-    });
-    ev.dataTransfer.setData("text/html", id);
-  };
-
   handleDelete = () => {
     const { data, deleteTask } = this.props;
     deleteTask(data.id);
@@ -80,4 +60,4 @@ class Card extends React.PureComponent {
 export default connect(
   null,
   { deleteTask }
-)(Card);
+)(dragging(Card));
