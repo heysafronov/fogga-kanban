@@ -12,10 +12,6 @@
   margin: 0 50px 0 50px;
 }
 
-.kanban__main-wrapper-close {
-  display: none;
-}
-
 .backlog-color {
   background-image: linear-gradient(#f6f8fc, #f6f8fc),
     radial-gradient(circle at top left, #c781ff, #e57373);
@@ -300,6 +296,7 @@
 
 .card {
   border-radius: 5px;
+  border: 1px dashed var(--colorWhite);
   background-color: var(--colorWhite);
   width: 260px;
   height: auto;
@@ -489,4 +486,22 @@
 
 .kanban__main-add-btn:hover {
   box-shadow: 0px 0px 60px 0px #9ea7fc;
+}
+
+.article-enter {
+  opacity: 0.01;
+}
+
+.article-enter.article-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.article-leave {
+  opacity: 1;
+}
+
+.article-leave.article-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
 }

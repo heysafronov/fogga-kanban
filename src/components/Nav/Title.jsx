@@ -4,12 +4,13 @@ import { boardOpen } from "../../actions/";
 
 class Title extends React.Component {
   render() {
+    const { board } = this.props;
     return (
       <div className="kanban__nav-name">
         <div className="kanban-name">Studio Board</div>
         <div className="kanban-arrow" onClick={this.handleBoardOpen}>
           <i className="material-icons">
-            {this.props.board ? "expand_more" : "chevron_right"}
+            {board ? "expand_more" : "chevron_right"}
           </i>
         </div>
       </div>
@@ -17,7 +18,8 @@ class Title extends React.Component {
   }
 
   handleBoardOpen = () => {
-    this.props.boardOpen();
+    const { boardOpen } = this.props;
+    boardOpen();
   };
 }
 

@@ -1,6 +1,5 @@
 import React from "react";
 import Cards from "./Cards.jsx";
-import ClassNames from "classnames";
 import { connect } from "react-redux";
 import {
   filtratedTasksBacklog,
@@ -8,17 +7,28 @@ import {
   filtratedTasksReview,
   filtratedTasksComplete
 } from "../../selectors/";
+import CSSTransition from "react-addons-css-transition-group";
 
 class Main extends React.Component {
   render() {
-    const { board, backlog, progress, review, complete } = this.props;
-    const style = ClassNames({
-      "kanban__main-wrapper": true,
-      "kanban__main-wrapper-close": !board
-    });
     return (
       <section className="kanban__main">
-        <div className={style}>
+        <CSSTransition
+          transitionName="article"
+          transitionEnterTimeout={500}
+          transitionLeaveTimeout={300}
+        >
+          {this.cardsList}
+        </CSSTransition>
+      </section>
+    );
+  }
+
+  get cardsList() {
+    const { board, backlog, progress, review, complete } = this.props;
+    if (board) {
+      return (
+        <div className="kanban__main-wrapper">
           <Cards
             name="Backlog"
             style="backlog-color"
@@ -44,8 +54,8 @@ class Main extends React.Component {
             data={complete}
           />
         </div>
-      </section>
-    );
+      );
+    }
   }
 }
 
