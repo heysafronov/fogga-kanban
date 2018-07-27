@@ -213,3 +213,15 @@
   border-radius: 40px;
   width: auto;
 }
+
+@media screen and (max-width: 670px) {
+  .kanban__header-search {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .kanban-wrapper {
+    padding: 0;
+  }
+}

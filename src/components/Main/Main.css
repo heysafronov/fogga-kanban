@@ -505,3 +505,16 @@
   opacity: 0.01;
   transition: opacity 300ms ease-in;
 }
+
+@media screen and (max-width: 820px) {
+  .kanban__main-wrapper {
+    justify-content: space-around;
+    margin: 0px;
+  }
+}
+
+@media screen and (max-width: 1380px) {
+  .kanban__main-add-btn {
+    display: none;
+  }
+}

@@ -129,3 +129,23 @@
 .kanban-arrow:hover {
   box-shadow: 0px 0px 20px 0px #9ea7fc;
 }
+
+@media screen and (max-width: 720px) {
+  .kanban__nav-avs {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .kanban__nav-name {
+    margin: 0 auto;
+  }
+
+  .kanban__nav-wrapper {
+    margin: 0;
+  }
+
+  .avatar-user {
+    margin-right: 0;
+  }
+}
