@@ -1,12 +1,15 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 class Schedule extends React.Component {
   render() {
     return (
-      <div className="schedule-area">
-        <i className="material-icons">event_note</i>
-        <span>Schedule</span>
-      </div>
+      <Link to="/schedule">
+        <div className="schedule-area">
+          <i className="material-icons">event_note</i>
+          <span>Schedule</span>
+        </div>
+      </Link>
     );
   }
 }

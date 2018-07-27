@@ -54,3 +54,7 @@ body {
 .kanban-wrapper {
   padding: 10px;
 }
+
+a {
+  text-decoration: none;
+}
