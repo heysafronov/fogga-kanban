@@ -6,7 +6,7 @@
   "scripts": {
     "clear": "rimraf ./dist",
     "dev": "webpack-dev-server --mode development",
-    "build": "npm run clear && webpack --mode production"
+    "build": "npm run clear && webpack --mode development"
   },
   "author": "Egor Safronov",
   "license": "MIT",
