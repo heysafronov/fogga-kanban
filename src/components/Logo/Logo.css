@@ -5,10 +5,6 @@
   text-align: center;
   line-height: 60px;
   font-size: 20px;
-}
-
-.kanban__logo a {
-  text-decoration: none;
   color: var(--colorWhite);
 }
 
