@@ -1,11 +1,11 @@
 import "./index.css";
 import React from "react";
 import { Route, Switch } from "react-router-dom";
-import Boards from "./components/Routers/Boards.jsx";
-import Manage from "./components/Routers/Manage.jsx";
-import Reports from "./components/Routers/Reports.jsx";
-import Schedule from "./components/Routers/Schedule.jsx";
-import Settings from "./components/Routers/Settings.jsx";
+import Boards from "./components/Routers/Boards/index.jsx";
+import Manage from "./components/Routers/Manage/index.jsx";
+import Reports from "./components/Routers/Reports/index.jsx";
+import Schedule from "./components/Routers/Schedule/index.jsx";
+import Settings from "./components/Routers/Settings/index.jsx";
 
 class App extends React.Component {
   render() {

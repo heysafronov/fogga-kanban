@@ -1,8 +1,8 @@
 import React from "react";
-import Logo from "../Logo/Logo.jsx";
-import Header from "../Header/Header.jsx";
-import Sidebar from "../Sidebar/Sidebar.jsx";
-import Nav from "../Nav/Nav.jsx";
+import Child from "./child.jsx";
+import Logo from "../../Logo/Logo.jsx";
+import Header from "../../Header/Header.jsx";
+import Sidebar from "../../Sidebar/Sidebar.jsx";
 
 class Reports extends React.Component {
   render() {
@@ -12,7 +12,7 @@ class Reports extends React.Component {
           <Logo />
           <Header />
           <Sidebar />
-          <Nav />
+          <Child />
         </div>
       </div>
     );
