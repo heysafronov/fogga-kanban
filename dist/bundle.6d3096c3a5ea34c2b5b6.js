@@ -1,4 +1,4 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[6],{60:function(e,t,n){var r;
+(window.webpackJsonp=window.webpackJsonp||[]).push([[2],{60:function(e,t,n){var r;
 /*!
   Copyright (c) 2017 Jed Watson.
   Licensed under the MIT License (MIT), see

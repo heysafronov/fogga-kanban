@@ -9,6 +9,7 @@ const Loading = () => <div>Loading...</div>;
 //   loading: Loading
 // });
 //
+
 const Boards = Loadable({
   loader: () => import("./components/Routes/Boards/index.jsx"),
   loading: Loading

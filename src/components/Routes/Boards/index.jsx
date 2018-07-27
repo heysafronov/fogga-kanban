@@ -8,27 +8,31 @@ import MainNav from "../../../MainNav.jsx";
 import { Route, Switch } from "react-router-dom";
 import Loadable from "react-loadable";
 const Loading = () => <div>Loading...</div>;
+import Manage from "../Manage/index.jsx";
+import Schedule from "../Schedule/index.jsx";
+import Reports from "../Reports/index.jsx";
+import Settings from "../Settings/index.jsx";
 
 
-const Schedule = Loadable({
-  loader: () => import("../Schedule/index.jsx"),
-  loading: Loading
-});
+// const Schedule = Loadable({
+//   loader: () => import("../Schedule/index.jsx"),
+//   loading: Loading
+// });
 
-const Reports = Loadable({
-  loader: () => import("../Reports/index.jsx"),
-  loading: Loading
-});
+// const Reports = Loadable({
+//   loader: () => import("../Reports/index.jsx"),
+//   loading: Loading
+// });
+//
+// const Settings = Loadable({
+//   loader: () => import("../Settings/index.jsx"),
+//   loading: Loading
+// });
 
-const Settings = Loadable({
-  loader: () => import("../Settings/index.jsx"),
-  loading: Loading
-});
-
-const Manage = Loadable({
-  loader: () => import("../Manage/index.jsx"),
-  loading: Loading
-});
+// const Manage = Loadable({
+//   loader: () => import("../Manage/index.jsx"),
+//   loading: Loading
+// });
 
 class Boards extends React.Component {
   render() {
@@ -41,7 +45,7 @@ class Boards extends React.Component {
           <Sidebar />
 
             <Route path="/manage" component={Manage} />
-            <Route exact path="" component={MainNav} />
+            <Route exact path="/boards" component={MainNav} />
             <Route path="/schedule" component={Schedule} />
             <Route path="/reports" component={Reports} />
             <Route path="/settings" component={Settings} />
