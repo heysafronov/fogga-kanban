@@ -7,14 +7,9 @@ import Child from "./child.jsx";
 class Manage extends React.Component {
   render() {
     return (
-      <div className="kanban-wrapper">
-        <div className="kanban">
-          <Logo />
-          <Header />
-          <Sidebar />
+
           <Child />
-        </div>
-      </div>
+
     );
   }
 }

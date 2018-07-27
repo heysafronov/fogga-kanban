@@ -6,16 +6,7 @@ import Sidebar from "../../Sidebar/Sidebar.jsx";
 
 class Reports extends React.Component {
   render() {
-    return (
-      <div className="kanban-wrapper">
-        <div className="kanban">
-          <Logo />
-          <Header />
-          <Sidebar />
-          <Child />
-        </div>
-      </div>
-    );
+    return <Child />;
   }
 }
 
