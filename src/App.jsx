@@ -1,19 +1,10 @@
 import "./index.css";
 import React from "react";
+import Loadable from "react-loadable";
 import Nav from "./components/Nav/Nav.jsx";
 import Logo from "./components/Logo/Logo.jsx";
-import Main from "./components/Main/Main.jsx";
 import Header from "./components/Header/Header.jsx";
-// import Sidebar from "./components/Sidebar/Sidebar.jsx";
-
-import { Route, Switch } from "react-router-dom";
-import Loadable from "react-loadable";
-const Loading = () => <div>Loading...</div>;
-
-const Sidebar = Loadable({
-  loader: () => import("./components/Sidebar/Sidebar.jsx"),
-  loading: Loading
-});
+import Sidebar from "./components/Sidebar/Sidebar.jsx";
 
 class App extends React.Component {
   render() {
@@ -23,14 +14,18 @@ class App extends React.Component {
           <Logo />
           <Header />
           <Sidebar />
-          <Switch>
-            <Route exact path="*" component={Main} />
-            <Route path="./reports" component={Nav} />
-          </Switch>
+          <Main />
+          <Nav />
         </div>
       </div>
     );
   }
 }
+
+const Loading = () => <div className="loading">Loading...</div>;
+const Main = Loadable({
+  loader: () => import("./components/Main/Main.jsx"),
+  loading: Loading
+});
 
 export default App;

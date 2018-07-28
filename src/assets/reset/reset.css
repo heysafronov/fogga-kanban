@@ -58,3 +58,9 @@ body {
 a {
   text-decoration: none;
 }
+
+.loading {
+  color: var(--colorWhite);
+  font-size: 14px;
+  margin: 0 auto;
+}
