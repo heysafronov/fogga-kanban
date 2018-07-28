@@ -7,7 +7,7 @@ Single-page application with [React](https://reactjs.org/) and [Redux](https://r
 Demo is available on this [page](https://heysafronov.github.io/fogga-kanban/dist/).
 
 ## Screenshot
-<img src="https://raw.githubusercontent.com/heysafronov/mangosteen-chat/master/src/assets/img/mangosteen-chat.png">
+<img src="https://raw.githubusercontent.com/heysafronov/fogga-kanban/master/src/assets/img/fogga-kanban.png?token=Af7pByf3cC7Vasjfva4eILl-erDQT-BCks5bZUx0wA%3D%3D">
 
 ## Browser support
 Compatible with every evergreen browser.
