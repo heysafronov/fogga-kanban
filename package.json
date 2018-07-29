@@ -11,7 +11,8 @@
     "clear": "rimraf ./dist",
     "dev": "webpack-dev-server --mode development",
     "build": "npm run clear && webpack --mode production",
-    "test": "jest"
+    "test": "jest",
+    "cc": "node tools/createComponent.js --myClass"
   },
   "author": "Egor Safronov",
   "license": "MIT",
