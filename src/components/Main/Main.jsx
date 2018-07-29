@@ -14,9 +14,13 @@ class Main extends React.Component {
   render() {
     return (
       <section className="kanban__main">
-
+        <CSSTransition
+          transitionName="article"
+          transitionEnterTimeout={500}
+          transitionLeaveTimeout={300}
+        >
           {this.cardsList}
-
+        </CSSTransition>
       </section>
     );
   }
