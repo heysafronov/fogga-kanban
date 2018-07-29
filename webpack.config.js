@@ -13,18 +13,16 @@ module.exports = {
     rules: [
       {
         test: /\.jsx?$/,
-        exclude: /node_modules/,
-        use: [
-          { loader: "babel-loader" }
-        ]
+        exclude: [
+          path.resolve(__dirname, "node_modules"),
+          path.resolve(__dirname, "tools"),
+          path.resolve(__dirname, "src/tests")
+        ],
+        use: [{ loader: "babel-loader" }]
       },
       {
         test: /\.s?css$/,
-        use: [
-          MiniCssExtractPlugin.loader,
-          "css-loader",
-          "sass-loader"
-        ]
+        use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"]
       },
       { test: /\.(png|jpg)$/, loader: "url-loader?limit=8192" }
     ]
