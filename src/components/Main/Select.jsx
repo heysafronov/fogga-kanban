@@ -11,7 +11,7 @@ class Select extends React.Component {
             <div className="select-wrapper-main">
               <div className="select-text-main">Add reports</div>
               <div className="select-event-note-main">
-                <i className="material-icons">assessment</i>
+                <i className="material-icons">dashboard</i>
               </div>
             </div>
             <div className="select-wrapper">
