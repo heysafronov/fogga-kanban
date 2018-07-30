@@ -476,10 +476,10 @@ a {
 }
 
 .kanban__nav-avs-add i {
-  font-size: 28px;
+  font-size: 25px;
   position: absolute;
-  top: 6px;
-  left: 6px;
+  top: 7px;
+  left: 7.5px;
 }
 
 .kanban__nav-avs-invite {
@@ -605,6 +605,15 @@ a {
   justify-content: space-between;
   flex-wrap: wrap;
   margin: 0 50px 0 50px;
+}
+
+.kanban__main-wrapper-opacity {
+  background-color: var(--colorNav);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 50px 0 50px;
+  opacity: 0.2;
 }
 
 .backlog-color {
@@ -1072,15 +1081,95 @@ a {
 }
 
 .kanban__main-add-btn i {
-  font-size: 30px;
+  font-size: 25px;
   position: absolute;
-  top: 10px;
-  left: 10px;
+  top: 12.5px;
+  left: 12.5px;
   color: var(--colorWhite);
 }
 
 .kanban__main-add-btn:hover {
   box-shadow: 0px 0px 60px 0px #9ea7fc;
+}
+
+.kanban__main-select {
+  display: flex;
+}
+
+.main-select {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 78%;
+  left: 83.6%;
+  width: 180px;
+}
+
+.select-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+
+.select-wrapper-main {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+
+.select-event-note-main {
+  width: 35px;
+  height: 35px;
+  background-color: #ff9985;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.select-event-note {
+  width: 35px;
+  height: 35px;
+  background-color: #e57373;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.select-event-note-main i {
+  color: var(--colorWhite);
+  font-size: 21px;
+}
+
+.select-event-note i {
+  color: var(--colorWhite);
+  font-size: 21px;
+}
+
+.select-text-main {
+  box-shadow: 0px 0px 10px 0px #d2d7e0;
+  background-color: #f6f8fc;
+  border-radius: 5px;
+  color: var(--colorName);
+  padding: 3px 10px;
+  font-size: 13px;
+  height: 18px;
+  margin-right: 10px;
+}
+
+.select-text {
+  box-shadow: 0px 0px 10px 0px #d2d7e0;
+  background-color: #f6f8fc;
+  border-radius: 5px;
+  color: var(--colorName);
+  padding: 3px 10px;
+  font-size: 13px;
+  height: 18px;
 }
 
 .article-enter {

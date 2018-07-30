@@ -3,7 +3,8 @@ import {
   BOARD_OPEN,
   DELETE_TASK,
   WHO_OPEN,
-  DRAG_AND_DROP
+  DRAG_AND_DROP,
+  SELECT
 } from "../constants";
 
 export function boardOpen() {
@@ -38,5 +39,11 @@ export function dragAndDrop(ev, cat) {
   return {
     type: DRAG_AND_DROP,
     payload: { ev, cat }
+  };
+}
+
+export function selected() {
+  return {
+    type: SELECT
   };
 }

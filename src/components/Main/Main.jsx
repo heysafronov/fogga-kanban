@@ -1,5 +1,6 @@
 import React from "react";
 import Cards from "./Cards.jsx";
+import Select from "./Select.jsx";
 import Button from "./Button.jsx";
 import { connect } from "react-redux";
 import {
@@ -26,11 +27,15 @@ class Main extends React.Component {
   }
 
   get cardsList() {
-    const { board, backlog, progress, review, complete } = this.props;
+    const { board, backlog, progress, review, complete, selected } = this.props;
     if (board) {
       return (
         <React.Fragment>
-          <div className="kanban__main-wrapper">
+          <div
+            className={
+              selected ? "kanban__main-wrapper-opacity" : "kanban__main-wrapper"
+            }
+          >
             <Cards
               name="Backlog"
               style="backlog-color"
@@ -57,6 +62,7 @@ class Main extends React.Component {
             />
           </div>
           <Button />
+          <Select />
         </React.Fragment>
       );
     }
@@ -65,6 +71,7 @@ class Main extends React.Component {
 
 const mapStateToProps = state => ({
   board: state.board,
+  selected: state.selected,
   backlog: filtratedTasksBacklog(state),
   progress: filtratedTasksProgress(state),
   review: filtratedTasksReview(state),

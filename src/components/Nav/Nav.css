@@ -33,10 +33,10 @@
 }
 
 .kanban__nav-avs-add i {
-  font-size: 28px;
+  font-size: 25px;
   position: absolute;
-  top: 6px;
-  left: 6px;
+  top: 7px;
+  left: 7.5px;
 }
 
 .kanban__nav-avs-invite {
