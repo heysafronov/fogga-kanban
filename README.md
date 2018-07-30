@@ -4,7 +4,7 @@
 Single-page application with [React](https://reactjs.org/) and [Redux](https://redux.js.org).
 
 ## Demo
-Demo is available on this [page](https://heysafronov.github.io/fogga-kanban/dist/).
+Demo is available on this [page](https://heysafronov.github.io/fogga-kanban/dist/index.html).
 
 ## Screenshot
 <img src="https://raw.githubusercontent.com/heysafronov/fogga-kanban/master/src/assets/img/fogga-kanban.png?token=Af7pByf3cC7Vasjfva4eILl-erDQT-BCks5bZUx0wA%3D%3D">
