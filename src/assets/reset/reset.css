@@ -62,5 +62,5 @@ a {
 .loading {
   color: var(--colorWhite);
   font-size: 14px;
-  margin: 0 auto;
+  margin: auto;
 }

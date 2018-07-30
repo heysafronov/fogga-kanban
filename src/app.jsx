@@ -1,10 +1,14 @@
 import "./index.css";
 import React from "react";
 import Loadable from "react-loadable";
-import Nav from "./components/Nav/Nav.jsx";
 import Logo from "./components/Logo/Logo.jsx";
+import { Switch, Route } from "react-router-dom";
 import Header from "./components/Header/Header.jsx";
-import Sidebar from "./components/Sidebar/Sidebar.jsx";
+import Basic from "./components/Routes/Basic/Basic.jsx";
+import Manage from "./components/Routes/Manage/Manage.jsx";
+import Reports from "./components/Routes/Reports/Reports.jsx";
+import Schedule from "./components/Routes/Schedule/Schedule.jsx";
+import Settings from "./components/Routes/Settings/Settings.jsx";
 
 class App extends React.Component {
   render() {
@@ -14,8 +18,13 @@ class App extends React.Component {
           <Logo />
           <Header />
           <Sidebar />
-          <Main />
-          <Nav />
+          <Switch>
+            <Route exact path="/" component={Basic} />
+            <Route path="/manage" component={Manage} />
+            <Route path="/schedule" component={Schedule} />
+            <Route path="/reports" component={Reports} />
+            <Route path="/settings" component={Settings} />
+          </Switch>
         </div>
       </div>
     );
@@ -23,8 +32,9 @@ class App extends React.Component {
 }
 
 const Loading = () => <div className="loading">Loading...</div>;
-const Main = Loadable({
-  loader: () => import("./components/Main/Main.jsx"),
+
+const Sidebar = Loadable({
+  loader: () => import("./components/Sidebar/Sidebar.jsx"),
   loading: Loading
 });
 
