@@ -1,7 +1,7 @@
 # Kanban Board Application
 >Note. This application is in alpha phase. However, it is workable and safe.
 
-Single-page application with [React](https://reactjs.org/) and [Redux](https://redux.js.org).
+Single-page application with [React](https://reactjs.org/), [Redux](https://redux.js.org) and [React Router](https://reacttraining.com/react-router/).
 
 ## Demo
 Demo is available on this [page](https://heysafronov.github.io/fogga-kanban/dist/index.html).
