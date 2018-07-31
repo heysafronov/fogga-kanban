@@ -348,6 +348,10 @@ a {
   margin-top: 5px;
 }
 
+.active-area .kanban__sidebar-settings {
+  color: var(--colorLogo);
+}
+
 .manage-area {
   height: 100px;
   display: flex;
@@ -372,15 +376,19 @@ a {
   margin-top: 5px;
 }
 
+.active-area .manage-area {
+  color: var(--colorLogo);
+  border-left: 3px solid var(--colorLogo);
+}
+
 .boards-area {
   height: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: var(--colorLogo);
-  border-left: 3px solid var(--colorLogo);
   cursor: pointer;
+  color: var(--colorBarW);
 }
 
 .boards-area i {
@@ -391,6 +399,11 @@ a {
   font-size: 14px;
   font-weight: 400;
   margin-top: 5px;
+}
+
+.active-area .boards-area {
+  color: var(--colorLogo);
+  border-left: 3px solid var(--colorLogo);
 }
 
 .schedule-area {
@@ -417,6 +430,11 @@ a {
   margin-top: 5px;
 }
 
+.active-area .schedule-area {
+  color: var(--colorLogo);
+  border-left: 3px solid var(--colorLogo);
+}
+
 .reports-area {
   height: 100px;
   display: flex;
@@ -439,6 +457,11 @@ a {
   font-weight: 400;
   font-size: 14px;
   margin-top: 5px;
+}
+
+.active-area .reports-area {
+  color: var(--colorLogo);
+  border-left: 3px solid var(--colorLogo);
 }
 
 .kanban__nav {

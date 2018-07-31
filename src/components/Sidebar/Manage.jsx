@@ -1,15 +1,15 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 class Manage extends React.Component {
   render() {
     return (
-      <Link to="/manage">
+      <NavLink to="/manage" activeClassName="active-area">
         <div className="manage-area">
           <i className="material-icons">people</i>
           <span>Manage</span>
         </div>
-      </Link>
+      </NavLink>
     );
   }
 }

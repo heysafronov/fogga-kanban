@@ -1,15 +1,15 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 class Boards extends React.Component {
   render() {
     return (
-      <Link to="/">
+      <NavLink exact to="/" activeClassName="active-area">
         <div className="boards-area">
           <i className="material-icons">dns</i>
           <span>Boards</span>
         </div>
-      </Link>
+      </NavLink>
     );
   }
 }
