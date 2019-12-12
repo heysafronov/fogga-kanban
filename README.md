@@ -1,4 +1,4 @@
-# Kanban Board Application
+# React Kanban Dashboard Template
 >Note. This application is in alpha phase. However, it is workable and safe.
 
 Single-page application with [React](https://reactjs.org/), [Redux](https://redux.js.org) and [React Router](https://reacttraining.com/react-router/).
