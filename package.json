@@ -46,7 +46,7 @@
     "jest": "^23.4.2",
     "mini-css-extract-plugin": "^0.4.1",
     "minimist": "^1.2.3",
-    "node-sass": "^4.9.2",
+    "node-sass": "^4.13.1",
     "prettier": "1.13.7",
     "rimraf": "^2.6.2",
     "sass-loader": "^7.0.3",
